@@ -5,9 +5,10 @@
 		.selecionado {background-color:red;}
 	</style>
 	<script src="framework/angular.js" type="text/javascript"></script>
+	<script src="framework/angular-messages.js" type="text/javascript"></script>
 	<script>
 		// Cria MODULO
-		angular.module("listaTelefonica", []);
+		angular.module("listaTelefonica", ["ngMessages"]);
 		
 		// Localiza um MODULO
 		angular.module("listaTelefonica").controller("listaTelefonicaController", function($scope){
@@ -27,6 +28,7 @@
 			$scope.addContato = function(contato){
 				$scope.contatos.push(angular.copy(contato));
 				delete $scope.contato;
+				$scope.contatoForm.$setPristine();
 			};
 			$scope.delContato = function(contatos){
 				$scope.contatos = contatos.filter(function(contato){
@@ -88,36 +90,68 @@
 					</tr>
 				</table>
 			<!-- FIM Usando OBJETO -->
+			Valido {{contatoForm.$valid}}
+			Invalido {{contatoForm.$invalid}}
+			<form name="contatoForm">
+				<!-- DIRETIVA ng-model-->
+				<input type="text" ng-model="contato.nome" name="nome" ng-required="true" ng-minlength="10"/>
+				<br />
+				<input type="text" ng-model="contato.telefone" name="tel" ng-required="true" ng-pattern="/^\d{4}-\d{4}$/"/>
+				<br />
+				
+				<!-- INICIO DEFININDO VALUE -->
+				<select ng-model="contato.operadora" ng-options="operadora.cod as operadora.nome for operadora in operadoras">
+					<option value="">Selecione</option>
+				</select>
+				<!-- FIM DEFININDO VALUE -->
 
-			<!-- DIRETIVA ng-model-->
-			<input type="text" ng-model="contato.nome" />
-			<br />
-			<input type="text" ng-model="contato.telefone" />
-			<br />
-			
-			<!-- INICIO DEFININDO VALUE -->
-			<select ng-model="contato.operadora" ng-options="operadora.cod as operadora.nome for operadora in operadoras">
-				<option value="">Selecione</option>
-			</select>
-			<!-- FIM DEFININDO VALUE -->
+		
+				<!-- INICIO DEFININDO GRUPOS -->
+				<select ng-model="contato.operadora" ng-options="operadora.cod as operadora.nome group by operadora.categoria for operadora in operadoras">
+					<option value="">Selecione</option>
+				</select>
+				<!-- FIM DEFININDO GRUPOS -->
+			</form>
 
-	
-			<!-- INICIO DEFININDO GRUPOS -->
-			<select ng-model="contato.operadora" ng-options="operadora.cod as operadora.nome group by operadora.categoria for operadora in operadoras">
-				<option value="">Selecione</option>
-			</select>
-			<!-- FIM DEFININDO GRUPOS -->
+			<!-- Diretiva NG-MESSAGES-->
+			<div ng-messages="contatoForm.nome.$error">
+				<div ng-message="required">
+					Preenche nome ng-message
+				</div>
+				<div ng-message="minlength">
+					Preenche nome com 10 cara ng-message
+				</div>
+			</div>
 
-
+			<div ng-show="contatoForm.$invalid">
+				Preenche nome e telefone
+			</div>
+			<div ng-show="contatoForm.nome.$error.required && contatoForm.nome.$dirty">
+				Preenche nome
+			</div>
+			<div ng-show="contatoForm.nome.$error.minlength">
+				Preenche nome com 10 cara
+			</div>
+			<div ng-show="contatoForm.tel.$error.required">
+				Preenche telefone
+			</div>
+			<div ng-show="contatoForm.tel.$error.pattern">
+				Telefone errado
+			</div>
 			<br />
 			Nome: {{nome}}
 			<br />
 			Telefone: {{telefone}}
 			<br />
 			<!-- EXPRESSAO -->
-			<input type="button" ng-click="addContato(contato)" value="Adciionar" ng-disabled="!contato.nome || !contato.telefone">
+			<input type="button" ng-click="addContato(contato)" value="Adciionar EXPRESSAO" ng-disabled="!contato.nome || !contato.telefone">
+
+			<!-- REQUIRED -->
+			<input type="button" ng-click="addContato(contato)" value="Adciionar REQUIRED" ng-disabled="contatoForm.$invalid">
+
 			<br />
 			<input type="button" ng-click="delContato(contatos)" value="Remover" ng-disabled="!isContatoSelecionado(contatos)">
+
 			{{contato}}
 		</div>
 	</body>

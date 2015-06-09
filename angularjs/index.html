@@ -18,7 +18,7 @@
 	<body ng-app="hello-angular">
 		<div ng-controller="hello-angularController">
 		<!--INTERPOLAÇÃO {{X}} -->
-			{{msg}}
+			{msg}
 		</div>
 	</body>
 </html>
@@ -55,6 +55,21 @@
 			= ng-class="{'selecionado negrito':  contato.selecionado}"
 		* ng-style (Atribui ESTILOS)
 			* ng-style="{selecionado:  contato.selecionado}"
+		* ng-required (Validação formulário, usar tag <FORM>), BOOLEAN
+		* ng-minlength
+		* ng-maxlength
+		* ng-pattern (Validação com expressão regular)
+		* ng-messages (MODULO | Chamar js e declarar [])
+			= ng-message
+
+
+
+	- OBJETOS DE VALIDAÇÃO
+		* $valid and $invalid (CONSULTAR VALIDADE DE CAMPO, FORM)
+		* $pristine (CONSULTAR CAMPO NUNCA FOI TOCADO DO FORM)
+		* $dirty (CONSULTAR CAMPO FOI TOCADO DO FORM)
+		* $setPrintine() (Volta campos virgens)
+		* $error (Consulta erro em formulario ou campo)
 
 	- CICLO NOTIFICAÇÃO
 		* TWO WAY DATA BINDING
