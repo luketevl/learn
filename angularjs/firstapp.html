@@ -1,0 +1,124 @@
+<html>
+	<head>
+	<title>Lista Telefonica</title>
+	<style>
+		.selecionado {background-color:red;}
+	</style>
+	<script src="framework/angular.js" type="text/javascript"></script>
+	<script>
+		// Cria MODULO
+		angular.module("listaTelefonica", []);
+		
+		// Localiza um MODULO
+		angular.module("listaTelefonica").controller("listaTelefonicaController", function($scope){
+			$scope.app = "Lista Telefonica";
+			$scope.classe = "selecionado";
+			$scope.contatos = [
+								{nome: "Lucas", telefone: "123", cor: "red"},
+								{nome: "Henrique", telefone: "324123", cor: "blue"},
+								{nome: "Souza", telefone: "65464564", cor: "yellow"}
+								];
+
+			$scope.operadoras = [
+								{nome: "Oi", cod: 31, categoria: "FIXO"},
+								{nome: "TIM", cod: 45, categoria: "Cel"},
+								{nome: "VIDO", cod: 14, categoria: "Cel"}
+								];
+			$scope.addContato = function(contato){
+				$scope.contatos.push(angular.copy(contato));
+				delete $scope.contato;
+			};
+			$scope.delContato = function(contatos){
+				$scope.contatos = contatos.filter(function(contato){
+					if(!contato.selecionado) return contato;
+				});
+			};
+			$scope.isContatoSelecionado = function(contatos){
+				return isContatoSelecionado = contatos.some(function(contato){
+					return contato.selecionado;
+				});
+			};
+		});
+	</script>
+	</head>
+	<!-- DIRETIVA -->
+	<body ng-app="listaTelefonica">
+		<div ng-controller="listaTelefonicaController">
+			<h4 ng-bind="app"></h4>
+			
+			<!-- INICIO Usando COLEÇÃO -->
+				<table>
+					<tr>
+						<th></th>
+						<th>Nome</th>
+						<th>Telefone</th>
+						<th>Operadora</th>
+						<th></th>
+					</tr>
+					<!-- Foreach-->
+					<tr ng-class="[classe, classe2]" ng-repeat="contato in contatos">
+						<!-- Usando DIRETIVA-->
+						<td ng-bind="contato.nome"></td>
+						<!-- Usando INTERPOLAÇÃO-->
+							<td>{{contato.telefone}}</td>
+							<td>{{contato.operadora.nome}}</td>
+					</tr>
+				</table>
+			<!-- FIM Usando COLEÇÃO -->
+
+			<!-- INICIO Usando OBJETO -->
+				<table>
+					<tr>
+						<th></th>
+						<th>Nome</th>
+						<th>Telefone</th>
+						<th>Operadora</th>
+						<th></th>
+					</tr>
+					<!-- Foreach-->
+					<tr ng-class="{'selecionado negrito': contato.selecionado}" ng-repeat="contato in contatos">
+					
+					<td><input type="checkbox" ng-model="contato.selecionado" /></td>
+						<!-- Usando DIRETIVA-->
+					<td ng-repeat="(chave, valor) in contato" ng-bind="valor"></td>
+					
+						<!-- Usando INTERPOLAÇÃO-->
+					<td ng-repeat="(chave, valor) in contato">{{chave + ' - ' + valor}}</td>
+					<td><div style="width: 15px; height:15px;" ng-style="{'background-color':contato.cor}">   </div></td>
+					</tr>
+				</table>
+			<!-- FIM Usando OBJETO -->
+
+			<!-- DIRETIVA ng-model-->
+			<input type="text" ng-model="contato.nome" />
+			<br />
+			<input type="text" ng-model="contato.telefone" />
+			<br />
+			
+			<!-- INICIO DEFININDO VALUE -->
+			<select ng-model="contato.operadora" ng-options="operadora.cod as operadora.nome for operadora in operadoras">
+				<option value="">Selecione</option>
+			</select>
+			<!-- FIM DEFININDO VALUE -->
+
+	
+			<!-- INICIO DEFININDO GRUPOS -->
+			<select ng-model="contato.operadora" ng-options="operadora.cod as operadora.nome group by operadora.categoria for operadora in operadoras">
+				<option value="">Selecione</option>
+			</select>
+			<!-- FIM DEFININDO GRUPOS -->
+
+
+			<br />
+			Nome: {{nome}}
+			<br />
+			Telefone: {{telefone}}
+			<br />
+			<!-- EXPRESSAO -->
+			<input type="button" ng-click="addContato(contato)" value="Adciionar" ng-disabled="!contato.nome || !contato.telefone">
+			<br />
+			<input type="button" ng-click="delContato(contatos)" value="Remover" ng-disabled="!isContatoSelecionado(contatos)">
+			{{contato}}
+		</div>
+	</body>
+</html>
