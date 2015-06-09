@@ -76,6 +76,16 @@
 			= Quando compilado, fica ESCUTANDO os ng-model e avisa as DIRETIVAS
 
 
+	- FILTROS
+		* Transformam dados, nem sempre filtram
+		* uppercase (Utiliza PIPE | )
+			= {{contato.nome | uppercase}}
+		* lowercase (Utiliza PIPE | )
+			= {{contato.nome | lowercase}}
+		* date (Formata data)
+			= {{contato.data | date: 'dd/MM/yyyy'}}
+
+
 	- OBSERVAÇÕES
 		* EVITAR ler $SCOPE DENTRO DO CONTROLLER
 		* SEMPRE TENTAR, ao definir uma ENTIDADE, ABSTRAÇÃO

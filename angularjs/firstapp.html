@@ -15,9 +15,9 @@
 			$scope.app = "Lista Telefonica";
 			$scope.classe = "selecionado";
 			$scope.contatos = [
-								{nome: "Lucas", telefone: "123", cor: "red"},
-								{nome: "Henrique", telefone: "324123", cor: "blue"},
-								{nome: "Souza", telefone: "65464564", cor: "yellow"}
+								{nome: "Lucas", telefone: "123", cor: "red", data: new Date()},
+								{nome: "Henrique", telefone: "324123", cor: "blue",  data: new Date()},
+								{nome: "Souza", telefone: "65464564", cor: "yellow", data: new Date()}
 								];
 
 			$scope.operadoras = [
@@ -56,11 +56,12 @@
 						<th>Telefone</th>
 						<th>Operadora</th>
 						<th></th>
+						<th>Data</th>
 					</tr>
 					<!-- Foreach-->
 					<tr ng-class="[classe, classe2]" ng-repeat="contato in contatos">
 						<!-- Usando DIRETIVA-->
-						<td ng-bind="contato.nome"></td>
+						<td ng-bind="contato.nome | uppercase"></td>
 						<!-- Usando INTERPOLAÇÃO-->
 							<td>{{contato.telefone}}</td>
 							<td>{{contato.operadora.nome}}</td>
@@ -76,6 +77,7 @@
 						<th>Telefone</th>
 						<th>Operadora</th>
 						<th></th>
+						<th>Data</th>
 					</tr>
 					<!-- Foreach-->
 					<tr ng-class="{'selecionado negrito': contato.selecionado}" ng-repeat="contato in contatos">
@@ -87,6 +89,8 @@
 						<!-- Usando INTERPOLAÇÃO-->
 					<td ng-repeat="(chave, valor) in contato">{{chave + ' - ' + valor}}</td>
 					<td><div style="width: 15px; height:15px;" ng-style="{'background-color':contato.cor}">   </div></td>
+					<!-- FILTRO -->
+					<td>{{contato.data | date: 'dd/MM/yyyy'}}</td>
 					</tr>
 				</table>
 			<!-- FIM Usando OBJETO -->
