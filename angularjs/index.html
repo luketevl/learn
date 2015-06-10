@@ -78,12 +78,27 @@
 
 	- FILTROS
 		* Transformam dados, nem sempre filtram
+		* Ordem Pode afetar
+		* Para suar no CONTROLLER deve importar o $filter
 		* uppercase (Utiliza PIPE | )
 			= {{contato.nome | uppercase}}
 		* lowercase (Utiliza PIPE | )
 			= {{contato.nome | lowercase}}
 		* date (Formata data)
 			= {{contato.data | date: 'dd/MM/yyyy'}}
+		* filter (Filtra dados)
+			= ng-repeat="x in xs | filter: {nome: elementoBusca}"
+		* orderBy (Ordena dados, usar no ng-repeat)
+			= | orderBy:'campo'
+			= | orderBy:'+campo'
+			= | orderBy:'-campo'
+			= | orderBy:'-campo' : true , PADRAMETRO QUE INVERTE
+		* currency (Converter números para moeda)
+			= | currency
+		* number
+			= | number:2
+		* limitTo (Limit array ous string)
+			= | limitTo: 2
 
 
 	- OBSERVAÇÕES

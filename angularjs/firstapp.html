@@ -6,18 +6,19 @@
 	</style>
 	<script src="framework/angular.js" type="text/javascript"></script>
 	<script src="framework/angular-messages.js" type="text/javascript"></script>
+	<script src="framework/angular-locate_pt-br.js" type="text/javascript"></script>
 	<script>
 		// Cria MODULO
 		angular.module("listaTelefonica", ["ngMessages"]);
 		
 		// Localiza um MODULO
-		angular.module("listaTelefonica").controller("listaTelefonicaController", function($scope){
+		angular.module("listaTelefonica").controller("listaTelefonicaController", function($scope, $filter){
 			$scope.app = "Lista Telefonica";
 			$scope.classe = "selecionado";
 			$scope.contatos = [
-								{nome: "Lucas", telefone: "123", cor: "red", data: new Date()},
-								{nome: "Henrique", telefone: "324123", cor: "blue",  data: new Date()},
-								{nome: "Souza", telefone: "65464564", cor: "yellow", data: new Date()}
+								{nome: $filter('uppercase')("Lucas"), telefone: "123", cor: "red", data: new Date(), valor: 53232},
+								{nome: "Henrique", telefone: "324123", cor: "blue",  data: new Date(), valor: 2121},
+								{nome: "Souza", telefone: "65464564", cor: "yellow", data: new Date(), valor: 4343}
 								];
 
 			$scope.operadoras = [
@@ -40,6 +41,9 @@
 					return contato.selecionado;
 				});
 			};
+			$scope.ordernarPor = function(campo){
+				$scope.criterioOrdenacao = campo;
+			};
 		});
 	</script>
 	</head>
@@ -47,24 +51,26 @@
 	<body ng-app="listaTelefonica">
 		<div ng-controller="listaTelefonicaController">
 			<h4 ng-bind="app"></h4>
-			
+			<input type="search" ng-model="busca" placeholder="digite sua musica" />
 			<!-- INICIO Usando COLEÇÃO -->
 				<table>
 					<tr>
 						<th></th>
-						<th>Nome</th>
-						<th>Telefone</th>
+						<th><a href="" ng-click="ordernarPor('nome')">Nome</a></th>
+						<th><a href="" ng-click="ordernarPor('telefone')">Telefone</a></th>
 						<th>Operadora</th>
 						<th></th>
 						<th>Data</th>
+						<th>Valor</th>
 					</tr>
 					<!-- Foreach-->
-					<tr ng-class="[classe, classe2]" ng-repeat="contato in contatos">
+					<tr ng-class="[classe, classe2]" ng-repeat="contato in contatos | filter:{nome: busca} | orderBy:criterioOrdenacao | limitTo: 2">
 						<!-- Usando DIRETIVA-->
-						<td ng-bind="contato.nome | uppercase"></td>
+						<td ng-bind="contato.nome | limitTo: 2"></td>
 						<!-- Usando INTERPOLAÇÃO-->
 							<td>{{contato.telefone}}</td>
 							<td>{{contato.operadora.nome}}</td>
+							<td>{{contato.valor | currency}}</td>
 					</tr>
 				</table>
 			<!-- FIM Usando COLEÇÃO -->
@@ -78,6 +84,7 @@
 						<th>Operadora</th>
 						<th></th>
 						<th>Data</th>
+						<th>Valor</th>
 					</tr>
 					<!-- Foreach-->
 					<tr ng-class="{'selecionado negrito': contato.selecionado}" ng-repeat="contato in contatos">
@@ -90,7 +97,8 @@
 					<td ng-repeat="(chave, valor) in contato">{{chave + ' - ' + valor}}</td>
 					<td><div style="width: 15px; height:15px;" ng-style="{'background-color':contato.cor}">   </div></td>
 					<!-- FILTRO -->
-					<td>{{contato.data | date: 'dd/MM/yyyy'}}</td>
+					<td>{{contato.data 	| date: 'dd/MM/yyyy'}}</td>
+					<td>{{contato.valor}}</td>
 					</tr>
 				</table>
 			<!-- FIM Usando OBJETO -->
