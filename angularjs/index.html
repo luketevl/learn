@@ -5,14 +5,14 @@
 	<script>
 		// Cria MODULO
 		angular.module("hello-angular", []);
-		
+
 		// Localiza um MODULO
 		angular.module("hello-angular").controller("hello-angularController", function($scope){
 			$scope.msg = "Hello Angular";
 		});
 	</script>
 	</head>
-	<!-- DIRETIVA 
+	<!-- DIRETIVA
 		* EXTENSÃO do HTML
 	-->
 	<body ng-app="hello-angular">
@@ -26,7 +26,7 @@
 
 
 
-<!-- 
+<!--
 ============================== CONHECENDO ==============================
 	- DIRETIVAS
 		* Extensão do HTML, (ATRIBUTOS)
@@ -101,13 +101,18 @@
 			= | limitTo: 2
 
 - SERVIÇOS
-		* $http (Requisições XMLHttpRequest ou JSONP), Importar SERVICO []
-			= get(url, config)
-			= post(url, ,data, config)
-			= put(url, ,data, config)
-			= delete(url, config)
-			= head(url, config)
-			= jsonp(url, config)
+	* REUTILIZAÇÃO DO CÓDIGO, ORGANIZAÇÃO
+	* $http (Requisições XMLHttpRequest ou JSONP), Importar SERVICO []
+		= get(url, config)
+		= post(url, ,data, config)
+		= put(url, ,data, config)
+		= delete(url, config)
+		= head(url, config)
+		= jsonp(url, config)
+	* Modo de criar FUNCAO FABRICA .factory
+	* Modo de criar FUNCAO CONSTRUTORA .service
+	* Criar CONSTANTES .value ou .constant (usado para provider)
+	* Criar SERVICOS PERSONALIZADOS .provider
 
 	- ORGANIZAÇÃO DO PROJETO
 		* INLINE (Tudo no mesmo arquivo)
