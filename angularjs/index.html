@@ -61,8 +61,17 @@
 		* ng-pattern (Validação com expressão regular)
 		* ng-messages (MODULO | Chamar js e declarar [])
 			= ng-message
-
-
+		* CRIANDO DIRETIVAS .directive
+		 	= template 'inserir html'
+			= templateUrl 'inserir arquivo html'
+			= replace 'remove o elemento da directive'
+			= restrict 'restringir modo de utilizacao' A -> Atributo, E -> Elemento, C-> CLASSE, M -> Comentário | Pode combinar atributos
+			= scope {} 'cria um scopo isolado para a directive'
+				= Passar parametros
+					= @ 'PREFIXAR direto'
+					= = 'PREFIXAR com data binding'
+			= transclude 'Encapsular conteudo', ERDA TODAS AS PROPRIEDADES mesmo sendo outro escopo
+				= inserir ng-transclude 'Definir onde vai aparecer'
 
 	- OBJETOS DE VALIDAÇÃO
 		* $valid and $invalid (CONSULTAR VALIDADE DE CAMPO, FORM)
@@ -78,6 +87,7 @@
 
 	- FILTROS
 		* Transformam dados, nem sempre filtram
+		* Criar filtros .filter(nome, function(){ return function(){ return }});
 		* Ordem Pode afetar
 		* Para suar no CONTROLLER deve importar o $filter
 		* uppercase (Utiliza PIPE | )
@@ -126,4 +136,6 @@
 		* EVITAR ler $SCOPE DENTRO DO CONTROLLER
 		* SEMPRE TENTAR, ao definir uma ENTIDADE, ABSTRAÇÃO
 			= cuidado com CICLOS usar angular.copy() ou delete $scope
+		* SABER qual ESCOPO {{$id}}
+		* Directive, opcao SCOPE caso nome seja igual colocar apenas @ exemplo title: "@title"
 -->

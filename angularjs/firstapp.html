@@ -7,13 +7,14 @@
 	<script src="framework/angular.js" type="text/javascript"></script>
 	<script src="framework/angular-messages.js" type="text/javascript"></script>
 	<script src="framework/angular-locate_pt-br.js" type="text/javascript"></script>
+
 	<script>
 
 		// Cria MODULO
 		angular.module("listaTelefonica", ["ngMessages"]);
 
 		// Localiza um MODULO
-			// $scope ESCOPO ENTRE VIEW E CONTROLLER 
+			// $scope ESCOPO ENTRE VIEW E CONTROLLER
 		angular.module("listaTelefonica").controller("listaTelefonicaController", function($scope, $filter){
 
 			$scope.app = "Lista Telefonica";
@@ -49,6 +50,7 @@
 			};
 		});
 	</script>
+	<script src="js/directives/minhaDirective.js" type="text/javascript"></script>
 	</head>
 	<!-- DIRETIVA -->
 	<body ng-app="listaTelefonica">
@@ -169,5 +171,11 @@
 
 			{{contato}}
 		</div>
+
+		<div ui-alert class="ui-alert">
+			<div class="ui-alert-title"></div>
+			{{error}}
+		</div>
+
 	</body>
 </html>
