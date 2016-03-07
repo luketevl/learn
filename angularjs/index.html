@@ -72,6 +72,11 @@
 					= = 'PREFIXAR com data binding'
 			= transclude 'Encapsular conteudo', ERDA TODAS AS PROPRIEDADES mesmo sendo outro escopo
 				= inserir ng-transclude 'Definir onde vai aparecer'
+			= require: "ngModel" - 'Acessa API'
+				= ^uiAccordions , 'Prefixando, pegando elemento pai'
+			= link: function(scope, element, attrs, require, controller){} 'Executada DEPOIS do te pleate compilado, USADA para interarir com a DOM'
+			= controller: = 'Definir uma API, compartilhar com outroas directives'
+				= é uma função construtora, acessando pelo this
 
 	- OBJETOS DE VALIDAÇÃO
 		* $valid and $invalid (CONSULTAR VALIDADE DE CAMPO, FORM)
@@ -138,4 +143,7 @@
 			= cuidado com CICLOS usar angular.copy() ou delete $scope
 		* SABER qual ESCOPO {{$id}}
 		* Directive, opcao SCOPE caso nome seja igual colocar apenas @ exemplo title: "@title"
+		* Ler $compile no DOC do ANGULAR
+		* Ler angular.element no DOC do ANGULAR
+		* Ler ngModel no DOC do ANGULAR
 -->
