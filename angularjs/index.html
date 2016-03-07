@@ -135,6 +135,15 @@
 		* SPECIFIC STYLE (Um arquivo para cada componenetes)
 		* DOMAIN STYLE (Arquivos por dominio)
 
+	- MODULO
+	 * COLEÇÃO DE COMPONENTES
+	 * CRIAR MODULO, IMPORTAR arquivo  e chamar ele no modulo que for usa-lo.
+	 * Gaurdar referencia ou sempre localizar
+	 * angular.module('meuModulo', []) 'CRIA MODULO'
+	 * angular.module('meuModulo') 'LOCALIZA MODULO'
+	 * INICIAR MODULO
+	 	= angular.mobule('nome').run(function($templateCache){ $templateCache.put('Nome', 'valor');};);
+
 
 
 	- OBSERVAÇÕES
@@ -146,4 +155,9 @@
 		* Ler $compile no DOC do ANGULAR
 		* Ler angular.element no DOC do ANGULAR
 		* Ler ngModel no DOC do ANGULAR
+		* MODULOS ganha performance
+		* MODULOS isolamento
+		* Nao referenciar MODULO com variavel global, usar sempre modo de LOCALIZAR
+		* QUANDO TIVER layout usar $templateCache
+		* Ler $templateCache no DOC do ANGULAR
 -->
