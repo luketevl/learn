@@ -61,6 +61,7 @@
 		* ng-pattern (Validação com expressão regular)
 		* ng-messages (MODULO | Chamar js e declarar [])
 			= ng-message
+		* ng-view (Template da ROTA acessada)
 		* CRIANDO DIRETIVAS .directive
 		 	= template 'inserir html'
 			= templateUrl 'inserir arquivo html'
@@ -143,7 +144,19 @@
 	 * angular.module('meuModulo') 'LOCALIZA MODULO'
 	 * INICIAR MODULO
 	 	= angular.mobule('nome').run(function($templateCache){ $templateCache.put('Nome', 'valor');};);
+	 * ngRoute ROTAS
+	 	= DECLARAR sua utilização
+		= $routeProvider.when('/contatos', function(){  - 'Para ONDE VOU'
+				templateUrl: 'view/contatos.html',
+				controller: 'nomeController',
+				resolve:{ - 'Resolver DEPENDENCIAS, CONDICAO DE ENTRADAS, só entra se promessas forem TRUE'
 
+				}
+			});
+		= $routeProvider.otherwise({redirectTo: '/rotaPadrao'});  - 'DEFINE COMPORTAMENTO QUANDO NAO ACHA A ROTA'
+
+	- OBJETOS
+		* $location.path('/rota'); - 'Vai para uma rota'
 
 
 	- OBSERVAÇÕES
@@ -160,4 +173,7 @@
 		* Nao referenciar MODULO com variavel global, usar sempre modo de LOCALIZAR
 		* QUANDO TIVER layout usar $templateCache
 		* Ler $templateCache no DOC do ANGULAR
+		* Errar ROTA nao vai mostrar nada, define uma rota padrao
+		* RESOLVE colocar o nome do parametro la no controoler que vai usar e colocar no escopo parametro.data
+
 -->
