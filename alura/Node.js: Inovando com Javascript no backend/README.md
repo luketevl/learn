@@ -15,6 +15,11 @@
         = request.url; - Pega a URL
     = servidor.listen(porta, host) - Escuta o servidor
     = var express = require('express') - Importa MODULOS, ARQUIVOS
+    = var load = require('express-load') - CARREGA BILBIOTECAS AUTOMATICAS
+      = load(pasta) - PROCURA em TODAS as pastas
+      = load(pasta, {cwd: 'pastas'}) - PROCURA em ALGUMAS pastas
+      = load(pasta).into(app); - TUDO carrregado AUTOMATICAMENTE vai para dentro do APP
+      = var con = app.config.db(); - USAR nomepasta.nomearquivo;
     = var app = express() - INVOCA O EXPRESS
     = var app = app.set('view engine', nomeEngine) - DEFINIR VARIAVEIS para dentro do express, passa pelo sistema inteiro
     = app.set('views', './app/views'); - TROCA  LUGAR onde o EXPRESS vai buscar as views
@@ -31,6 +36,7 @@
   = Bibliotecas
     = http - Criar servidor WEB
     = express - FrameWork
+    = express-load - FrameWork EXPRESS para carregar MODULOS automatico
     = mysql - Banco de dados
 
 * OBSERVACOES
@@ -50,3 +56,6 @@
     = Usar o MODULE.EXPORTS uma unica vez, assim ele carrega uma vez, codigo de definicao fica fora.
     = Pasta APP app.js SOBE O SERVIDOR
     = CAMINHOS RELATIVOS sao de ONDE o SERVIDOR começou a RODAR
+  = CARREGAR ROTA AUTOMATICA, ordem IMPORTA
+  = WRAPPER FUNCAO que encapsula outra funcao
+    = usar quando nao quero que EXECUTE automaticamente ALGO, exemplo banco de dados
