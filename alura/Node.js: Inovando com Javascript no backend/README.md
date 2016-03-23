@@ -23,26 +23,62 @@
     = var app = express() - INVOCA O EXPRESS
     = var app = app.set('view engine', nomeEngine) - DEFINIR VARIAVEIS para dentro do
     = var app = app.use(bodyParser.urlencoded({extended: true}) - Seta o TRATAMENTO de REQUISIÇÃO do BODY
+    = var app = app.use(bodyParser.json()) - Seta o TRATAMENTO de REQUISIÇÃO do BODY COM JSON - middleware
+    = var app = app.use(validator()) - Seta o VALIDADOR DE REQUICISOES middleware
     = app.set('views', './app/views'); - TROCA  LUGAR onde o EXPRESS vai buscar as views
     = app.listen(porta, servidorPronto); - Escuta o SERVIDOR
-    = app.get(nome, function(request, response){}); - RESPOSTAS E REQUICISOES DO SERVIDOR
+    = app.get(nome, function(request, response, next){}); - RESPOSTAS E REQUICISOES DO SERVIDOR
+        = next - USADO APRA O EXPRESS CONTINUAR SUA CADEIA DE FUNCAO
+          next(erros);
         = response.send(); - RESPONDE PARA O CLIENTE
         = response.render(local/arquivo); - RESPONDE PARA O CLIENTE
         = response.render(local/arquivo, variaveis); - RESPONDE PARA O CLIENTE COM VARIAVEIS
+        response.status(code).render(local/arquivo); - RESPONDE PARA O CLIENTE COM STATUS HTTP
+        = response.format({html: funtion(), json: function(){}}); - RESPONDE PARA O CLIENTE DE ACORDO COM OQUE ELE PEDIU(headers)
+    = app.get(configuracoes, function(response){}); - FAZ CHAMADA PRA SERVIDOR e OBTEM RESPOSTA DO SERVIDOR
+        = response.on('data', function(body){};) - VER CORPO DA RESPOSTA, QUANDO TIVER RESPOSTA(data) retorna o COPOR(body)
+        = response.statusCode - status da requisicao
+        = var cliente = app.request(configuracoes, function(response){}); - recebe um CLIENTE, ENVIA DADOS FAZ CHAMADA PRA SERVIDOR e OBTEM RESPOSTA DO SERVIDOR
+          = cliente.end(); - FECHA COMUNICACAO, DISPARA COMUNICACAO
     = module.exports = function(){}; - COMMON JS , FUNCAO QUE RETORNA ao dar REQUIRED
     = var con =  mysql.createConnection({host, user, password, databse}); - CRIA CONEXAO com o BANCO DE DADOS
     = con.query('query', function(erro, results){}); - Executa consulta SQL
-    = con.end(); - FECHA CONEXAO COM BANCO
+    = con.end(parametros); - FECHA CONEXAO COM BANCO
+    = response.redirect(lugar); - Redireciona
+    = var validator = request.assert(campo, msg) - VALIDACAO, RESPOSTA OBJETO DE VALIDACAO
+      = validator.notEmpty(); - FUNCAO VAZIO
+    = var erros = validationErrors(); - RETORNA TODOS OS ERROS
+
+    = describle(nomeTeste, function(){casosDeTestes}); - DESCREVE O CENARIO
+      = it('#listagem json', function(done){
+        // testa tudo e no final colocar
+        done();
+        }); - Do macro cenaro cria uma microcenario de teste
+    = var assert = require('assert');
+      = assert.equal(e,e2) - VALIDA SE EH IGUAL
+    = var supertest = require('supertest')(servidor); - POSSIBILITA PASSAR A REQUISICAO, no caso express
+      = supertest.get(link)
+        = .set('Accept', 'application/json')  - pode setar outras configuracoes a requisição
+        = .expect('Content-type', /json/);    -  ESPERA QUE A RESPOSTA POSSA SER algo
+        = .expect(200, done);    -  ESPERA QUE A RESPOSTA DO CODIGO DA REQUISICAO, PADRAO QUANDO NAO PASSA NADA.
+      = supertest.post(link)
+        = .send(dados); - envia dados
 
   = Bibliotecas
-    = http - Criar servidor WEB
+    = http   - Criar servidor WEB
+    = assert - VALIDACOES e joga exception (melhor usar o supertest)
     = express - FrameWork
     = express-load - FrameWork EXPRESS para carregar MODULOS automatico
+    = express-validator - FrameWork EXPRESS para VALIDAR
     = body-parser - PEGA PARSER e PREENCHE a propriedade .body do REQUEST
     = mysql - Banco de dados
+    = mocha - DEV teste de integracao
+    = supertest - DEV facilitar escrita do teste
 
 * OBSERVACOES
   = express - FrameWork para ajudar a tratar requisicoes
+    = SE NAO SETAR O AMBIENTE VAI SER SEMPRE DESENVOLVIMENTO
+    = process.env.NODE_DEV = SETA AMBIENTE
   = NPM gerenciador de pacote para javacript
   = npm init - CONFIGURA O PROJETO
   = npm install PACOTE -save / Baixa pacote e SALVA no package.json
@@ -64,3 +100,40 @@
   = WRAPPER FUNCAO que encapsula outra funcao
     = usar quando nao quero que EXECUTE automaticamente ALGO, exemplo banco de dados
   = MIDDLEWARE - Funcoes antes de chegar a requisição
+  = DEPOIS DO POST USAR REDIRECT retorna um codigo 302
+  = BOA PRATICA Usar os VERBOS HTTP para definir a ação, GET LISTA, POST salva. ENDERECO + VERBO
+  = CONTENT NEGOTIATIONS
+    = CLIENTE pode colocar no header das configuracoes que ele quer um TIPO determinado 'Accept': 'application/json'
+    = app.request(configuracoes, function) - apenas MONTA O OBJETO envia dados setar method: post nas configuracoes
+      = pode colocar no header das configuracoes que ele quer ENVIAR um TIPO determinado 'Content-Type': 'application/json'
+
+  = TESTE DE integracao
+    = node_modules/mocha/bin/mocha - RODA SCRIPT DE TESTES
+    = busca por padrao pasta TEST
+    = REQUIRE já eh automatico pelo SCRIPT DO mocha
+    = ao descrever IT coloca o #nome
+    = forma ASSINCRONA passar no it(nome, function(done))
+
+
+
+
+
+* ENTENDENDO
+  = module - Ver arquivo nodeModuleCarregamento
+  = callback
+    = LIBERA o processador
+    = query fica pronta, ele volta com o resultado
+    Existe uma função interna do Node.js que recebe um path do módulo a ser carregado.
+    Essa função procura pelo local do módulo de acordo com o formato do path.
+
+    Para conseguir carregar a função do módulo, ele cria uma função com um nome do tipo funcaoDeCarregamento ou algo assim, que recebe uma função anônima e dentro dessa função, invoca a função eval() do JavaScript passando como parâmetro o que foi carregado do módulo a partir do path recebido.
+
+    Pronto! Agora o código está carregado.
+
+    Para que ele fique visível de fora, é disponibilizado um objeto chamado module ou algo do tipo, que contém um objeto exports onde ficam armazenados todos os paths passados.
+
+    Por fim a funcaoDeCarregamento é invocada recebendo como parâmetro os próprios objetos module e module.exports e é retornado o objeto module.
+
+    Essa é a maneira escolhida pelo Node.js para fazer carregamento dinâmico de módulos JavaScript. Outros frameworks podem fazer de formas diferentes.
+
+    Uma convenção que ajuda a padronizar essa estratégia é a CommonJS, que como já vimos, define várias Especificações para código JavaScript.

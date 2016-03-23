@@ -6,9 +6,13 @@ module.exports = function(){
     var _salvar = function(produto, callback){
       connection.query('INSERT INTO livros set ?',produto, callback);
     };
+    var _deletar = function(produto, callback){
+      connection.query('DELETE FROM livros where id= ?',produto.id, callback);
+    };
     return {
       lista: _lista,
       salvar: _salvar,
+      deletar: _deletar,
     };
 
   };
