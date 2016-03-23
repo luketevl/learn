@@ -21,7 +21,8 @@
       = load(pasta).into(app); - TUDO carrregado AUTOMATICAMENTE vai para dentro do APP
       = var con = app.config.db(); - USAR nomepasta.nomearquivo;
     = var app = express() - INVOCA O EXPRESS
-    = var app = app.set('view engine', nomeEngine) - DEFINIR VARIAVEIS para dentro do express, passa pelo sistema inteiro
+    = var app = app.set('view engine', nomeEngine) - DEFINIR VARIAVEIS para dentro do
+    = var app = app.use(bodyParser.urlencoded({extended: true}) - Seta o TRATAMENTO de REQUISIÇÃO do BODY
     = app.set('views', './app/views'); - TROCA  LUGAR onde o EXPRESS vai buscar as views
     = app.listen(porta, servidorPronto); - Escuta o SERVIDOR
     = app.get(nome, function(request, response){}); - RESPOSTAS E REQUICISOES DO SERVIDOR
@@ -37,6 +38,7 @@
     = http - Criar servidor WEB
     = express - FrameWork
     = express-load - FrameWork EXPRESS para carregar MODULOS automatico
+    = body-parser - PEGA PARSER e PREENCHE a propriedade .body do REQUEST
     = mysql - Banco de dados
 
 * OBSERVACOES
@@ -45,7 +47,9 @@
   = npm init - CONFIGURA O PROJETO
   = npm install PACOTE -save / Baixa pacote e SALVA no package.json
   = express REQUIRE retorna uma funcao nao inicializada, deve ser invocada express();
-  = app.get - CRIA ROTAAAS
+  = app.get - CRIA ROTAAAS com GET
+  = app.post - CRIA ROTAAAS com POST
+    = request.body - CONTEUDO do POST, pelo express
   = (EJS) EMBEDDEDJJS -  Escrever código JS junto com html, PAGINAS DINAMICAS
     = TEM que criar a PASTA VIEWS
   = express eh INTEGRADO com MECANISMOS DE PAGINAS DINAMICAS
@@ -59,3 +63,4 @@
   = CARREGAR ROTA AUTOMATICA, ordem IMPORTA
   = WRAPPER FUNCAO que encapsula outra funcao
     = usar quando nao quero que EXECUTE automaticamente ALGO, exemplo banco de dados
+  = MIDDLEWARE - Funcoes antes de chegar a requisição

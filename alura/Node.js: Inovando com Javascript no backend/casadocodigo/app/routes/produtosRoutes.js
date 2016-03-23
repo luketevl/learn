@@ -7,4 +7,19 @@ module.exports = function(app){
     });
     con.end();
   });
+
+  app.get('/produtos/form', function(request, response){
+    console.log('affwefw');
+    response.render('produtos/form');
+  });
+
+  app.post('/produtos/salvar', function(request, response){
+    var con           = app.infra.connectionDB();
+    var produtosBanco = app.infra.produtosBanco(con);
+    var produto       = request.body;
+    produtosBanco.salvar(produto, function(erro, results){
+      response.render('produtos/lista');
+    });
+  });
+
 };
