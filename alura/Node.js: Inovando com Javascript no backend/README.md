@@ -98,7 +98,9 @@
     = process.env.NODE_ENV = SETA AMBIENTE
   = NPM gerenciador de pacote para javacript
   = npm init - CONFIGURA O PROJETO
-  = npm install PACOTE -save / Baixa pacote e SALVA no package.json
+  = npm install PACOTE --save / Baixa pacote e SALVA no package.json
+  = npm install PACOTE --save-dev / Baixa pacote e SALVA no package.json e USA APENAS EM DESENVOLVIMENTO
+  = express.use(); - SERVE PARA COLOCAR SUAS FUNCOES NO Fluxo de execução do express
   = express REQUIRE retorna uma funcao nao inicializada, deve ser invocada express();
   = app.get - CRIA ROTAAAS com GET
   = app.post - CRIA ROTAAAS com POST
