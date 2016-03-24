@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Alurapic</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+        <!-- IMPORTANDO O ANGULARJS -->
+        <script src="js/lib/angular.min.js"></script>
+
+        <!-- IMPORTANDO A APLICAÇÃO -->
+        <script src="js/main.js"></script>
+
+        <!-- IMPORTANTO OS CONTROLLERS -->
+        <script src="js/controllers/fotosController.js"></script>
+
+        <!-- IMPORTANTO OS SERVICES -->
+        <script src="js/services/fotosAPI.js"></script>
+    </head>
+    <body ng-app="app">
+        <div class="container" ng-controller="FotosController">
+          <div class="jumbotron">
+            <h1 class="text-center">AngularJS</h1>
+          </div>
+          <div class="panel panel-default" ng-repeat="foto in fotos">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{foto.titulo}}</h3>
+            </div>
+            <div class="panel-body">
+              <img src="{{foto.url}}" alt="{{foto.titulo}}" class="mg-responsive center-block" />
+            </div>
+          </div>
+        </div> <!-- fim container -->
+    </body>
+</html>
