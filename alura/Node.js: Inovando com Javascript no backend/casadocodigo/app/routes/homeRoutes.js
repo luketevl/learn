@@ -3,7 +3,7 @@ module.exports = function(app){
     console.log('Home');
     var con           = app.infra.connectionDB();
     var produtosBanco = app.infra.produtosBanco(con);
-    produtosBanco.lista(function(erro, results){
+    produtosBanco.lista(function(erro, results, next){
       console.log(erro);
       if(erro){
           return next(erro);

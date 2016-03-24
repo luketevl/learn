@@ -1,6 +1,6 @@
 module.exports = function(app){
 
-  app.get('/promocoes/form', function(request, response){
+  app.get('/promocoes/form', function(request, response, next){
     console.log('promocoes form');
     var con           = app.infra.connectionDB();
     var produtosBanco = app.infra.produtosBanco(con);

@@ -8,7 +8,7 @@ var createDBConnection = function(){
                                 host:     "localhost",
                                 user:     "root",
                                 password: "root",
-                                database: "casadocodigo_nodejs",
+                                database: "casadocodigo_no dejs",
     });
   }
   else if(process.env.NODE_ENV == 'test'){

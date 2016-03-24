@@ -2,10 +2,6 @@
   = Comandos node
     = node arquivo.js - Roda o arquivo
 
-
-
-
-
   = Funcoes
     = var http = require('http') - Importa MODULOS, ARQUIVOS
     = var http = require('http').Server(express) - NOSSA CUSTOM CUSTOMIZADA PARA TRATAR REQUISICOES NO CASO EXPRESS
@@ -27,6 +23,9 @@
     = var app = app.use(bodyParser.json()) - Seta o TRATAMENTO de REQUISIÇÃO do BODY COM JSON - middleware
     = var app = app.use(validator()) - Seta o VALIDADOR DE REQUICISOES middleware
     = app.use(express.static('public')); - Define arquivos ESTATICOS - middleware
+    = app.use(function(request, response, next){
+        response.statusCode(404, next());
+      }); - Para ROTAS cria uma página quando NAO ENCONTRADO, tipo 404
     = app.set('views', './app/views'); - TROCA  LUGAR onde o EXPRESS vai buscar as views
     = app.listen(porta, servidorPronto); - Escuta o SERVIDOR
     = app.get(nome, function(request, response, next){}); - RESPOSTAS E REQUICISOES DO SERVIDOR
@@ -96,6 +95,7 @@
   = express - FrameWork para ajudar a tratar requisicoes
     = SE NAO SETAR O AMBIENTE VAI SER SEMPRE DESENVOLVIMENTO
     = process.env.NODE_ENV = SETA AMBIENTE
+    = process.env.PORTA = SETA PORTA
   = NPM gerenciador de pacote para javacript
   = npm init - CONFIGURA O PROJETO
   = npm install PACOTE --save / Baixa pacote e SALVA no package.json
@@ -119,6 +119,7 @@
   = WRAPPER FUNCAO que encapsula outra funcao
     = usar quando nao quero que EXECUTE automaticamente ALGO, exemplo banco de dados
   = MIDDLEWARE - Funcoes antes de chegar a requisição
+    = ORDEM IMPORTA, então CUIDADO
   = DEPOIS DO POST USAR REDIRECT retorna um codigo 302
   = BOA PRATICA Usar os VERBOS HTTP para definir a ação, GET LISTA, POST salva. ENDERECO + VERBO
   = CONTENT NEGOTIATIONS
@@ -139,7 +140,16 @@
     = ao INSTALAR ele ja cria uma ROTA para o arquivo necessário para incluir nas paginas
       = /socket.io/socket.io.js
     = no REQUIRED passar o http
-      = fzer o http usar o express EXEMPLO require('http').Server(express);
+      = fazer o http usar o express EXEMPLO require('http').Server(express);
+
+  = Deploy
+    = Site heroku | PARA APPLICACAO
+      = heroku app:create "nomedoAPP"   | CRIA APP
+      = heroku addons:create cleardb:ignite | Cria bacno de dados
+      = heroku config | MOSTRA Variaveis de AMBIENTE
+    = Site cleardb  | PARA BANCO DE DADOS
+    = package.json | inserir nos SCRIPTS "start": "node app"
+    = package.json | inserir  propriedade "engine":{ "node": "versao"}
 
 
 * ENTENDENDO
