@@ -2,7 +2,8 @@ var bd  = require('mysql');
 
 var createDBConnection = function(){
   var con ={};
-  if(!process.env.NODE_DEV){
+  console.log(process.env.NODE_ENV);
+  if(!process.env.NODE_ENV){
     con = bd.createConnection({
                                 host:     "localhost",
                                 user:     "root",
@@ -10,12 +11,12 @@ var createDBConnection = function(){
                                 database: "casadocodigo_nodejs",
     });
   }
-  else if(!process.env.NODE_DEV == 'test'){
+  else if(process.env.NODE_ENV == 'test'){
     con = bd.createConnection({
                                 host:     "localhost",
                                 user:     "root",
                                 password: "root",
-                                database: "casadocodigo_dev_nodejs",
+                                database: "casadocodigo_dev_nodjs",
     });
   }
   return con;

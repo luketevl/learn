@@ -4,6 +4,16 @@ var express     = require('../config/config')();
 var request     = require('supertest')(express);
 
 describe('ProdutosController', function(){
+
+  beforeEach(function(done){
+    var con = express.infra.connectionDB();
+    con.query('DELETE FROM livros', function(erro, result){
+      if(!erro){
+        done();
+      }
+    });
+  });
+
   it('#listagem json com ASSERT', function(done){
     console.log('Teste de verificação da listagem do json');
     var configuracoes = {

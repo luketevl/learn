@@ -8,6 +8,7 @@
 
   = Funcoes
     = var http = require('http') - Importa MODULOS, ARQUIVOS
+    = var http = require('http').Server(express) - NOSSA CUSTOM CUSTOMIZADA PARA TRATAR REQUISICOES NO CASO EXPRESS
     = var servidor = http.createServer(function(req, response){ -  CRIA SERVIDOR, parametro FUNCAO cria requisicao e da resposta.
 
       });
@@ -25,6 +26,7 @@
     = var app = app.use(bodyParser.urlencoded({extended: true}) - Seta o TRATAMENTO de REQUISIÇÃO do BODY
     = var app = app.use(bodyParser.json()) - Seta o TRATAMENTO de REQUISIÇÃO do BODY COM JSON - middleware
     = var app = app.use(validator()) - Seta o VALIDADOR DE REQUICISOES middleware
+    = app.use(express.static('public')); - Define arquivos ESTATICOS - middleware
     = app.set('views', './app/views'); - TROCA  LUGAR onde o EXPRESS vai buscar as views
     = app.listen(porta, servidorPronto); - Escuta o SERVIDOR
     = app.get(nome, function(request, response, next){}); - RESPOSTAS E REQUICISOES DO SERVIDOR
@@ -54,6 +56,9 @@
         // testa tudo e no final colocar
         done();
         }); - Do macro cenaro cria uma microcenario de teste
+      = beforeEach(function(done){
+
+        }); - ANTES DOS ITs
     = var assert = require('assert');
       = assert.equal(e,e2) - VALIDA SE EH IGUAL
     = var supertest = require('supertest')(servidor); - POSSIBILITA PASSAR A REQUISICAO, no caso express
@@ -63,6 +68,17 @@
         = .expect(200, done);    -  ESPERA QUE A RESPOSTA DO CODIGO DA REQUISICAO, PADRAO QUANDO NAO PASSA NADA.
       = supertest.post(link)
         = .send(dados); - envia dados
+      = socketio - IMPORTAR ELE NO HTML
+        = FRONT END
+          = var socket = io(); - COMUNICA COM O SERVIDOR
+            = socket.on('novaResposta', function(data){
+              alert("Livro em promocao "+data.livro.id);
+              }); - QUNDO TIVER UMA NOVA RESPOSTA DO SERVIDOR
+        = BACK END
+          = var io = require('socket.io')(http);
+          = app.set('io', io); - TORNA GLOBAL
+          = app.get('io').emit('novaResposta', dados); - MANDA AVISO PARA QUEM TIVER ESCUTANDO SOCKETIO
+
 
   = Bibliotecas
     = http   - Criar servidor WEB
@@ -72,13 +88,14 @@
     = express-validator - FrameWork EXPRESS para VALIDAR
     = body-parser - PEGA PARSER e PREENCHE a propriedade .body do REQUEST
     = mysql - Banco de dados
+    = socketio - Implementar protocolo WEBSOCKET no servidor
     = mocha - DEV teste de integracao
     = supertest - DEV facilitar escrita do teste
 
 * OBSERVACOES
   = express - FrameWork para ajudar a tratar requisicoes
     = SE NAO SETAR O AMBIENTE VAI SER SEMPRE DESENVOLVIMENTO
-    = process.env.NODE_DEV = SETA AMBIENTE
+    = process.env.NODE_ENV = SETA AMBIENTE
   = NPM gerenciador de pacote para javacript
   = npm init - CONFIGURA O PROJETO
   = npm install PACOTE -save / Baixa pacote e SALVA no package.json
@@ -109,13 +126,18 @@
 
   = TESTE DE integracao
     = node_modules/mocha/bin/mocha - RODA SCRIPT DE TESTES
+    = NODE_ENV=test node_modules/mocha/bin/mocha - RODA SCRIPT DE TESTES, SETANDO O ENVORINMENT
     = busca por padrao pasta TEST
     = REQUIRE já eh automatico pelo SCRIPT DO mocha
     = ao descrever IT coloca o #nome
     = forma ASSINCRONA passar no it(nome, function(done))
 
-
-
+  = WEBSOCKET
+    = COMUNICACAO de MAO DUPLA entre servidor e cliente
+    = ao INSTALAR ele ja cria uma ROTA para o arquivo necessário para incluir nas paginas
+      = /socket.io/socket.io.js
+    = no REQUIRED passar o http
+      = fzer o http usar o express EXEMPLO require('http').Server(express);
 
 
 * ENTENDENDO

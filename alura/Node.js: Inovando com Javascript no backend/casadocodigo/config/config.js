@@ -10,7 +10,7 @@ module.exports = function (){
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
   app.use(validator());
-
+  app.use(express.static('./app/public'));
   load('routes', {cwd: 'app'}).then('infra').into(app);
   return app;
 };
