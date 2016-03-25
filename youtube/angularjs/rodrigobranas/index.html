@@ -146,7 +146,7 @@
 	 	= angular.mobule('nome').run(function($templateCache){ $templateCache.put('Nome', 'valor');};);
 	 * ngRoute ROTAS
 	 	= DECLARAR sua utilização
-		= $routeProvider.when('/contatos', function(){  - 'Para ONDE VOU'
+		= $routeProvider.when('/contatos',{  - 'Para ONDE VOU'
 				templateUrl: 'view/contatos.html',
 				controller: 'nomeController',
 				resolve:{ - 'Resolver DEPENDENCIAS, CONDICAO DE ENTRADAS, só entra se promessas forem TRUE'
