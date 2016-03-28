@@ -58,6 +58,8 @@
     = ng-model-options="{debounce: 6000}" | Só vai para o ng-model depois de um TEMPO
   = ng-bind | LE o valor da model
   = ng-view | Inserir uma pagina dentro, Template da ROTA acessada
+  = ng-include | Incluir arquivo. IMPORTANTE colocar com aspas simples
+    = ng-include = "'arquivo'"
 
 * MODULOS
   = [ngAnimate] | MODULO DE ANIMACAO
