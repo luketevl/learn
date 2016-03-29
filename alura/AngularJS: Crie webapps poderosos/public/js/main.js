@@ -1,1 +1,1 @@
-angular.module('app', ['ngAnimate', 'ngRoute']);
+angular.module('app', ['ngAnimate', 'ngRoute', 'ngResource']);

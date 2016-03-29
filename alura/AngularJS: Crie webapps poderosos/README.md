@@ -33,7 +33,7 @@
 				= inserir ng-transclude 'Definir onde vai aparecer'
 			= require: "ngModel" - 'Acessa API'
 				= ^uiAccordions , 'Prefixando, pegando elemento pai'
-			= link: function(scope, element, attrs, require, controller){} 'Executada DEPOIS do te pleate compilado, USADA para interarir com a DOM'
+			= link: function(scope, element, attrs, require, controller){} 'Executada DEPOIS do template compilado, USADA para interarir com a DOM'
 			= controller: = 'Definir uma API, compartilhar com outroas directives'
 				= é uma função construtora, acessando pelo this
     = $routeProvider.when(url,{  - 'Para ONDE VOU'
@@ -41,7 +41,6 @@
   			controller: 'nomeController',
   			resolve:{ - 'Resolver DEPENDENCIAS, CONDICAO DE ENTRADAS, só entra se promessas forem TRUE'
     				}
-    			});
           = $routeProvider.when(url:fotoID,{  - ': é CURINGA passa PARAMETROS'
 		= $routeProvider.otherwise({redirectTo: '/rotaPadrao'});  - 'DEFINE COMPORTAMENTO QUANDO NAO ACHA A ROTA'
     = $locationProvider.html5Mode(true); || ATIVA MODULO HTML 5 NAS ROTAS
@@ -70,9 +69,11 @@
   = ng-options        | Renderizar SELECTs
     = <select ng-options="objetos.id as objetos.nome for objeto in objetos">
 
+
 * MODULOS
-  = [ngAnimate] | MODULO DE ANIMACAO
-  = [ngRoute]   | MODULO DE ROTAS
+  = [ngAnimate]   | MODULO DE ANIMACAO
+  = [ngRoute]     | MODULO DE ROTAS
+  = [ngResource]  | MODULO DE INTERAÇÃO COM O RESTFULL
 
 * SERVIÇOS
   = $http           | REQUISICOES HTTP
@@ -81,6 +82,20 @@
     = .put(url + param, dados).then(callbacksucesso, callbackerror);
     = .delete(url + param).then(callbacksucesso, callbackerror);
   = $routeParams           | OBTEM parametros da ROTA
+  = $resource        | Interacao com RESTFULL
+    = $resource(url:param, ); | DEFINE A URL e OS PARAMETROS
+      = $resource(url:param, QUERYSTRING, {nome:{method: "PUT"}} ); | DEFINE A URL e OS PARAMETROS PUT
+    = $resource.query(callbacksucesso, callbackerror); | FAZ UMA CONSULTA
+    = $resource.delete({param}, callbacksucesso, callbackerror); | Faz uma consulta tipo DELETE para o RESTFULL
+  = $q | Cria uma promessas
+    = return $q(function(callbacksucesso, callbackerror));
+  = $watch(propriedade, funcao); | ESCUTANDO A PROPRIEDADE NO DOM
+  = $broadcast(funcao) | Disparar um EVENTO
+    = $scope.$broadcast
+  = $on | Quando evento for disparado
+    = $on(evento, funcao);
+  = $scope | Escopo local
+  = $rootScope | Escopo GLOBAL
 
 * FILTROS
   = filter: filtro | Filtra de acordo com uma string
@@ -114,3 +129,5 @@
   = ROTAS
     = :NomeVar | Passa variavel na ROTA, acessa a variavel pelo nome dado na rota
   = Controller ele tem hierarquia
+  = JQLITE | USADO PARA INTERAGIR COM O DOM
+    = CARREGAR JQUERY antes do ANGULAR ele troca JQLITE por JQUERY
