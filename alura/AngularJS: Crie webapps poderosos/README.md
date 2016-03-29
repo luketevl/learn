@@ -26,7 +26,8 @@
 			= restrict 'restringir modo de utilizacao' A -> Atributo, E -> Elemento, C-> CLASSE, M -> Comentário | Pode combinar atributos
 			= scope {} 'cria um scopo isolado para a directive'
 				= Passar parametros
-					= @ 'PREFIXAR direto'
+					= @ 'PREFIXAR direto, STRING'
+          = & 'PASSA UMA EXPRESSAO que vai ser AVALIADA'
 					= = 'PREFIXAR com data binding'
 			= transclude 'Encapsular conteudo', ERDA TODAS AS PROPRIEDADES mesmo sendo outro escopo
 				= inserir ng-transclude 'Definir onde vai aparecer'
@@ -41,6 +42,7 @@
   			resolve:{ - 'Resolver DEPENDENCIAS, CONDICAO DE ENTRADAS, só entra se promessas forem TRUE'
     				}
     			});
+          = $routeProvider.when(url:fotoID,{  - ': é CURINGA passa PARAMETROS'
 		= $routeProvider.otherwise({redirectTo: '/rotaPadrao'});  - 'DEFINE COMPORTAMENTO QUANDO NAO ACHA A ROTA'
     = $locationProvider.html5Mode(true); || ATIVA MODULO HTML 5 NAS ROTAS
       = <base href="/"> | Tem que colocar a base
@@ -60,6 +62,13 @@
   = ng-view | Inserir uma pagina dentro, Template da ROTA acessada
   = ng-include | Incluir arquivo. IMPORTANTE colocar com aspas simples
     = ng-include = "'arquivo'"
+  = ng-submit | "Evento de submit"
+  = ng-click  | "Evento de clique"
+  = ng-show     | Exibição CONDICIONAL
+  = ng-disabled     | HABILITA DESABILITA formulario
+  = ng-maxlength     | Valida TAMANHO MAXIMO do campo
+  = ng-options        | Renderizar SELECTs
+    = <select ng-options="objetos.id as objetos.nome for objeto in objetos">
 
 * MODULOS
   = [ngAnimate] | MODULO DE ANIMACAO
@@ -67,12 +76,17 @@
 
 * SERVIÇOS
   = $http           | REQUISICOES HTTP
-    = .get().then(callbacksucesso, callbackerror);
+    = .get(url).then(callbacksucesso, callbackerror);
+    = .post(url, dados).then(callbacksucesso, callbackerror);
+    = .put(url + param, dados).then(callbacksucesso, callbackerror);
+    = .delete(url + param).then(callbacksucesso, callbackerror);
+  = $routeParams           | OBTEM parametros da ROTA
 
 * FILTROS
   = filter: filtro | Filtra de acordo com uma string
   = filter: filtro: TRUE | Filtra de acordo com uma string e se for completa
-
+  = uppercase | COLOCA LETRA MAIUSCULAS
+    = (var | uppercase)
 * ANGULAR EXPRESSION
   = INTERPOLAÇÃO | PEGAR VALORES DO ANGULAR
     = {{nome}}
@@ -89,3 +103,14 @@
   = IMPORTANTE
     = Passar o $scope
     = no http funcao do results tem propriedade .data que tem o retorno que queremos
+  = VALIDAR FORMULARIOS deve desligar a validacao do HTML 5
+    = <form novalidate></form>
+      = nomedoForm.$submitted | Valida se formulario foi submetido
+      = nomedoForm.$valid | Verifica se FORMULARIO esta VALIDO
+      = nomedoForm.$invalid | Verifica se FORMULARIO esta INVALIDO
+      = Angular usa o nomedoForm.nomedoCampo
+        = nomedoForm.nomedoCampo.$error | Busca os erros do FORM
+          = nomedoForm.nomedoCampo.$error.REQUIRED | Verifica a obrigatoriedade
+  = ROTAS
+    = :NomeVar | Passa variavel na ROTA, acessa a variavel pelo nome dado na rota
+  = Controller ele tem hierarquia

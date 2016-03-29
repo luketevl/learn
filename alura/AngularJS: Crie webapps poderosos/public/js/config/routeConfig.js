@@ -4,4 +4,8 @@ angular.module('app').config(function($routeProvider, $locationProvider){
     templateUrl: '/../../views/partials/principal.html',
     controller: 'FotosController',
   });
+  $routeProvider.when('/fotos/new',{
+    templateUrl: '/../../views/partials/foto.html',
+    controller: 'FotosController',
+  });
 });
