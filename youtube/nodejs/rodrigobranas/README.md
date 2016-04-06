@@ -42,3 +42,21 @@
     = se NAO PASSAR caminho relativo ou absoluto ele busca na PASTA NODE_MODULES
     = Se nao INCOVAR o Metodo ele FOGE do CACHE
   = NUNCA COMITAR a pasta NODE_MODULES
+
+
+
+  = #3 - Global Objects
+
+    = FUNCOES
+      = Object.keys() | Mostra apenas as chaves
+
+    = OBJETOS
+      = global ou GLOBAL ou root ou sem indicar o VAR| Objeto GLOBAL
+
+  * OBSERVACOES
+    = TUDO dentro do MODULO é PRIVADO
+    = CUIDADO nao POLUIR OBJETO GLOBAL
+    = EXPORTS, required são pertencentes ao MODULO e nao GLOBAL
+    = DECLARA A variavel GLOBAL ao USAR pode usar apenas o NOME
+    = usar SEM O VAR variavel vira GLOBAL
+    = CRIE UM MODULO e faça variaveis que podem ser utilizadas em varios locais
