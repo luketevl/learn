@@ -19,11 +19,11 @@ HTML 5
     = complement() |
     = sature()  |
     = adjust-hue() |
-    =  %placeholder %nome(param: valorPadrao){} | ISOLA O CSS Cria placeholder e cria em uma unica linha com elmentos com propriedades iguais
+    =  %nome(param: valorPadrao){} | ISOLA O CSS Cria placeholder e cria em uma unica linha com elmentos com propriedades iguais
       = @extend nome; | CHAMA O PLACEHOLDER
   = round() | Arredonda valor
 
-  
+
 * Comandos
   = gem install sass | INSTALA SASS
   = gem install compass | INSTALA O COMPASS
