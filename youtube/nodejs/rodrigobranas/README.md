@@ -60,3 +60,21 @@
     = DECLARA A variavel GLOBAL ao USAR pode usar apenas o NOME
     = usar SEM O VAR variavel vira GLOBAL
     = CRIE UM MODULO e faça variaveis que podem ser utilizadas em varios locais
+
+
+    = #4 - TIMERS
+
+      = FUNCOES
+        = var t = setTimeout | Execute funcao apos determinado tempo.
+          = clearTimeout(t) | CANCELA o timeout
+        = setInterval() | AGENDAMENTO
+          = clearInterval | AGENDAMENTO de cancelamento
+        = setImmediate() | Agendamento na HORA
+
+      = OBJETOS
+        =
+
+    * OBSERVACOES
+      = Usado para agendar funcoes
+      = O resto executa e DEPOIS o setTimeout RODA
+      = EVENT LOOP -> Executa uma unica thread e fica com o resto na FILA
