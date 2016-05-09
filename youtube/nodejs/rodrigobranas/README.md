@@ -72,9 +72,20 @@
         = setImmediate() | Agendamento na HORA
 
       = OBJETOS
-        =
 
     * OBSERVACOES
       = Usado para agendar funcoes
       = O resto executa e DEPOIS o setTimeout RODA
       = EVENT LOOP -> Executa uma unica thread e fica com o resto na FILA
+
+
+          = #4 - PROCESS
+
+            = FUNCOES
+
+
+            = OBJETOS
+              = process | Processos do NODE
+                = process.argv | Parametros utilizados na linha de comando
+
+          * OBSERVACOES
