@@ -10,7 +10,7 @@
 | I                   | me              | mine                | myself            |
 | YOU                 | you             | **yours**           | **yours**elf      |
 | HE                  | **him**         | his                 | **him**self       |
-| SHE                 | **her**         | hers                | herself           |
-| IT                  | it              | **its**             | itself            |
+| SHE                 | **her**         | hers                | **her**self       |
+| IT                  | it              | **its**             | **its**elf        |
 | WE                  | you             | **ours**            | **ours**el*ves*   |
 | THEY                | them            | **theirs**          | **theirs**el*ves* |
