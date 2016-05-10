@@ -12,5 +12,5 @@
 | HE                  | **him**         | his                 | **him**self       |
 | SHE                 | **her**         | hers                | herself           |
 | IT                  | it              | **its**             | itself            |
-| WE                  | you             | **ours**            | oursel*ves*       |
-| THEY                | them            | **theirs**          | theirsel*ves*     |
+| WE                  | you             | **ours**            | **ours**el*ves*   |
+| THEY                | them            | **theirs**          | **theirs**el*ves* |
