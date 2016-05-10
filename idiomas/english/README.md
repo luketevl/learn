@@ -2,8 +2,8 @@
   ## Pronomes
 
 
-| Pronomes Subjetivos | Pronomes Objetos | Pronomes Possessivos | Pronomes Relativos |
-|---------------------|------------------|----------------------|--------------------|
+| Pronomes Subjetivos | Adjetivos Possessivos | Pronomes Objetos | Pronomes Possessivos | Pronomes Relativos |
+|---------------------|-----------------------|------------------|----------------------|--------------------|
 
 | Subjective Pronouns | Possessive Adjectives | Object Pronouns | Possessive Pronouns | Relative Pronouns |
 |---------------------|-----------------------|-----------------|---------------------|-------------------|
