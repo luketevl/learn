@@ -1,5 +1,5 @@
+# Pronomes
 # Pronouns
-## Pronomes
 
 
 | Pronomes Subjetivos | Pronomes Objetos | Adjetivos Possessivos | Pronomes Possessivos | Pronomes Relativos          |
@@ -64,3 +64,24 @@
     | WHERE              | Lugar  | onde, em que, no que, no qual(is), na qual(is)      |
     | WHEN               | Datas  | quando, em que, no qual(is), na qual(is)            |
     | WHAT               |        | o que                                               |
+
+
+# Verbos
+# Verbs
+### Presente Continuo
+### Present Continuous
+
+| Affirmative             | Negative                | Interrogative           | Short Answer            |
+|:-----------------------:|:-----------------------:|:-----------------------:|:-----------------------:|
+
+> Ação que acontece **AGORA** ou **ACABANDO DE ACONTECER**
+
+
+### Presente do Indicativo
+### Simple Present
+
+| Affirmative             | Negative                | Interrogative           | Short Answer            |
+|:-----------------------:|:-----------------------:|:-----------------------:|:-----------------------:|
+
+# Adverbios
+# Adverbs
