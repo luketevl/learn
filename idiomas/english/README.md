@@ -71,10 +71,23 @@
 ### Presente Continuo
 ### Present Continuous
 
-| Affirmative             | Negative                | Interrogative           | Short Answer            |
-|:-----------------------:|:-----------------------:|:-----------------------:|:-----------------------:|
+| Affirmative             | Negative                        | Interrogative               | Short Answer            |
+|:-----------------------:|:-------------------------------:|:---------------------------:|:-----------------------:|
+| I am work**ing**        | I am **not** working            | **Am** i work**ing**?       | Yes, i am               |
+| You are work**ing**     | You are **not** work**ing**     | **Are** you work**ing**?    | No, you are             |
+| He is work**ing**       | He is **not** work**ing**       | **Is** he work**ing**?      | Yes, he is              |
+| She is work**ing**      | She is **not** work**ing**      | **Is** she work**ing**?     | No she is               |
+| It is work**ing**       | It is **not** work**ing**       | **Is** it work**ing**?      | Yes, it is              |
+| We are work**ing**      | We are **not** work**ing**      | **Are** we work**ing**?     | Yes we are              |
+| They are work**ing**    | They are **not** work**ing**    | **Are** they work**ing**?   | No, they are            |
 
-> Ação que acontece **AGORA** ou **ACABANDO DE ACONTECER**
+> - Ação que acontece **AGORA** ou **ACABANDO DE ACONTECER**
+  - **NEGAÇÃO** deve ser usado o **NOT** **após** o verbo _to be_
+  - **INTERROGATIVA** verbo _to be_ no **inicio** da frase
+  - Regras
+    - Terminado com **e** _remove_ **e** e acrescenta **ING**
+    - **Consoante Vogal Consoante** deve _dobrar_ a última letra e acrescenta **ING**
+
 
 
 ### Presente do Indicativo
