@@ -28,18 +28,21 @@
 > Usados para substituir o sujeito na frase.
 
 ### Object Pronouns
-> Usado como OBJETO
+> - Usado como OBJETO
+  - Recebendo ação
 
 ### Possessive Adjectives
 > - Não há **PLURAL**
   - PREcedem **SUBSTANTIVOS**
   - **NÃO** usar **ARTIGOS** (the, a, an)
+  - **POSSE**
 
 ### Possessive Pronouns
 > - Não há **PLURAL**
   - **NÃO** precedem **SUBSTANTIVOS**
   - **NÃO** usar **ARTIGOS** (the, a, an)
   - Pode usado com  **PREPOSIÇÃO** (of)
+  - **POSSE**
 
 ### Reflexive Pronouns
 > - Vem SEMPRE depois do **VERBO**
