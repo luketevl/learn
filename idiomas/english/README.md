@@ -2,8 +2,8 @@
 ## Pronomes
 
 
-| Pronomes Subjetivos | Adjetivos Possessivos | Pronomes Objetos | Pronomes Possessivos | Pronomes Reflexivos |
-|---------------------|-----------------------|------------------|----------------------|---------------------|
+| Pronomes Subjetivos | Pronomes Objetos | Adjetivos Possessivos | Pronomes Possessivos | Pronomes Reflexivos | Pronomes Relativos |
+|---------------------|------------------|-----------------------|----------------------|---------------------|--------------------|
 
 | Subjective Pronouns | Object Pronouns | Possessive Adjectives | Possessive Pronouns | Reflexive Pronouns |
 |---------------------|-----------------|-----------------------|---------------------|--------------------|
@@ -36,3 +36,20 @@
 ### Reflexive Pronouns
 > - Vem SEMPRE depois do **VERBO**
   - Quando ação do verbo cai no _proprio_ sujeito.
+
+| Relative Pronouns                                                   |
+|:-------------------------------------------------------------------:|
+| WHOSE [_Posse_] cujo(s),cuja(s)                                     |
+| WHERE [_Lugar_] onde, em que, no que, no qual(is), na qual(is)      |
+| WHEN  [_datas_] quando, em que, no qual(is), na qual(is)            |
+| WHAR  []        o que                                               |
+
+
+### Relative Pronouns
+> - **Sujeito** ou **Objeto** do verbo principal
+    - Seguido por um _verbo_ ele é um **SUJEITO**
+    - Seguido por um _substantivo_ ou _pronome_ ele é um **OBJETO**
+  - **ANCEDENTE** for **PESSOA**
+    - Usa-se **who**
+  - **ANCEDENTE** for **COISAS** ou **ANIMAIS**
+    - Usa-se **which**
