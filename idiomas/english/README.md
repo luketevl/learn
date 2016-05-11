@@ -81,7 +81,8 @@
 | We are work**ing**      | We are **not** work**ing**      | **Are** we work**ing**?     | Yes we are              |
 | They are work**ing**    | They are **not** work**ing**    | **Are** they work**ing**?   | No, they are            |
 
-> - Ação que acontece **AGORA** ou **ACABANDO DE ACONTECER**
+>
+  - Ação que acontece **AGORA** ou **ACABANDO DE ACONTECER**
   - Ação que acontece no momento da **FALA** pode estar _acontecendo_ ou não
   - Ação que acontece no **FUTURO** _próximo_
     - Usa-se **always** entre verbo _to be_ e _verbo principal_
@@ -97,8 +98,34 @@
 ### Presente do Indicativo
 ### Simple Present
 
-| Affirmative             | Negative                | Interrogative           | Short Answer            |
-|:-----------------------:|:-----------------------:|:-----------------------:|:-----------------------:|
+| Affirmative             | Negative                        | Interrogative               | Short Answer            |
+|:-----------------------:|:-------------------------------:|:---------------------------:|:-----------------------:|
+| I work                  | I **do not** work               | **Do** i work?              | Yes, i do               |
+| You work                | You **do not** work             | **Do** you work?            | No, you do              |
+| He work**s**            | He **does not** work            | **Does** he works?          | Yes, he does            |
+| She work**s**           | She **does not** work           | **Does** she works?         | No she  does            |
+| It work**s**            | It **do not** work              | **Does** it works?          | Yes, it does            |
+| We work                 | We **do not** work              | **Do** we work?             | Yes we do               |
+| They work               | They **do not** work            | **Do** they work?           | No, they do             |
+
+>
+  - **AFIRMAÇÃO** No **HE**, **SHE**, **IT** acrescenta o **s** no final do verbo
+    - Verbos terminados em **ss**, **sh**, **ch**, **x**, **z**, **o** acrescenta o **ES**
+    - Verbos terminados em **y** _substitui_ por **i** e acrescenta o **ES**
+    - Verbo  **to have** vira **has**
+  - Usado em _fatos e situações atuais_
+    - Anthony _live_**s** in New York ( _Antonio mora em Nova Iorque_)
+  - Usado em _hábitos_ normalmente usados ADVERBIO de TEMPO
+    - She never _whatches_ TV
+  - **NEGATIVA**
+    - Usa **do not** para **I**, **YOU**, **WE**,**YOU**,**THEY**
+    - Usa **does not** para **HE**, **SHE**, **IT**
+  - **INTERROGATIVA**
+    - Usa **do** para **I**, **YOU**, **WE**,**YOU**,**THEY** _antes_ do SUJEITO
+    - Usa **does** para **HE**, **SHE**, **IT** _antes_ do SUJEITO
+  - **INTERROGATIVA NEGATIVA** usa **do** ou **does** _antes_ do SUJEITO e **not** _depois_ do SUJEITO
+
+
 
 # Adverbios
 # Adverbs
