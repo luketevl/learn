@@ -104,7 +104,7 @@
 | You work                | You **do not** work             | **Do** you work?            | No, you do              |
 | He work**s**            | He **does not** work            | **Does** he works?          | Yes, he does            |
 | She work**s**           | She **does not** work           | **Does** she works?         | No she  does            |
-| It work**s**            | It **do not** work              | **Does** it works?          | Yes, it does            |
+| It work**s**            | It **does not** work            | **Does** it works?          | Yes, it does            |
 | We work                 | We **do not** work              | **Do** we work?             | Yes we do               |
 | They work               | They **do not** work            | **Do** they work?           | No, they do             |
 
