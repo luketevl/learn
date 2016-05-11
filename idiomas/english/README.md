@@ -49,7 +49,7 @@
 
     | Relative Pronouns                                                   |
     |---------------------------------------------------------------------|
-    | WHOSE [**Posse**] cujo(s),cuja(s)                                     |
-    | WHERE [**Lugar**] onde, em que, no que, no qual(is), na qual(is)      |
-    | WHEN  [**Datas**] quando, em que, no qual(is), na qual(is)            |
-    | WHAR  []        o que                                               |
+    | WHOSE [_Posse_] cujo(s),cuja(s)                                     |
+    | WHERE [_Lugar_] onde, em que, no que, no qual(is), na qual(is)      |
+    | WHEN  [_Datas_] quando, em que, no qual(is), na qual(is)            |
+    | WHAT  []        o que                                               |
