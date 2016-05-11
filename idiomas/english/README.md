@@ -2,11 +2,11 @@
 ## Pronomes
 
 
-| Pronomes Subjetivos | Pronomes Objetos | Adjetivos Possessivos | Pronomes Possessivos | Pronomes Reflexivos | Pronomes Relativos |
-|---------------------|------------------|-----------------------|----------------------|---------------------|--------------------|
+| Pronomes Subjetivos | Pronomes Objetos | Adjetivos Possessivos | Pronomes Possessivos | Pronomes Reflexivos |
+|---------------------|------------------|-----------------------|----------------------|---------------------|
 
 | Subjective Pronouns | Object Pronouns | Possessive Adjectives | Possessive Pronouns | Reflexive Pronouns |
-|---------------------|-----------------|-----------------------|---------------------|--------------------|
+|:-------------------:|:---------------:|:---------------------:|:-------------------:|:------------------:|
 | I                   | me              | my                    | mine                | myself             |
 | YOU                 | you             | your                  | **yours**           | **yours**elf       |
 | HE                  | **him**         | his                   | his                 | **him**self        |
@@ -38,7 +38,7 @@
   - Quando ação do verbo cai no _proprio_ sujeito.
 
 | Relative Pronouns                                                   |
-|:-------------------------------------------------------------------:|
+|---------------------------------------------------------------------|
 | WHOSE [_Posse_] cujo(s),cuja(s)                                     |
 | WHERE [_Lugar_] onde, em que, no que, no qual(is), na qual(is)      |
 | WHEN  [_datas_] quando, em que, no qual(is), na qual(is)            |
