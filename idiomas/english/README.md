@@ -2,8 +2,16 @@
 ## Pronomes
 
 
-| Pronomes Subjetivos | Pronomes Objetos | Adjetivos Possessivos | Pronomes Possessivos | Pronomes Reflexivos |
-|---------------------|------------------|-----------------------|----------------------|---------------------|
+| Pronomes Subjetivos | Pronomes Objetos | Adjetivos Possessivos | Pronomes Possessivos | Pronomes Relativos          |
+|:-------------------:|:----------------:|:---------------------:|:--------------------:|:---------------------------:|
+| EU                   | min             | meu, minha            | o meu, a minha       | a mim mesmo                 |
+| VOCÊ                 | a você          | seu, sua              | o seu, a sua         | a você mesmo(a)             |
+| ELE                  | a ele           | dele                  | o dele               | a ele mesmo                 |
+| ELA                  | a ela           | dela                  | a dela               | a ela mesmo                 |
+| COISAS               | o, a ,lhe       | dele, dela            | o dele, a dela       | a si mesmo                  |
+| NÓS                  | nos             | nosso, nossa          | o nosso, a nossa     | a nós mesmos                |
+| VOCÊS                | a vocês         | seu, sua, de você     | o seu, a sua         | a vocês mesmos              |
+| ELES/ELAS            | os, as, lhes    | deles, delas          | o deles, a delas     | a eles mesmos, a elas mesmo |
 
 | Subjective Pronouns | Object Pronouns | Possessive Adjectives | Possessive Pronouns | Reflexive Pronouns |
 |:-------------------:|:---------------:|:---------------------:|:-------------------:|:------------------:|
@@ -47,9 +55,9 @@
   - **ANCEDENTE** for **COISAS** ou **ANIMAIS**
     - Usa-se **which**
 
-    | Relative Pronouns                                                   |
-    |---------------------------------------------------------------------|
-    | WHOSE [_Posse_] cujo(s),cuja(s)                                     |
-    | WHERE [_Lugar_] onde, em que, no que, no qual(is), na qual(is)      |
-    | WHEN  [_Datas_] quando, em que, no qual(is), na qual(is)            |
-    | WHAT  []        o que                                               |
+    | Relative Pronouns  | Modo   | Pronomes Relativos                                  |
+    |--------------------|--------|-----------------------------------------------------|
+    | WHOSE              | Posse  | cujo(s),cuja(s)                                     |
+    | WHERE              | Lugar  | onde, em que, no que, no qual(is), na qual(is)      |
+    | WHEN               | Datas  | quando, em que, no qual(is), na qual(is)            |
+    | WHAT               |        | o que                                               |
