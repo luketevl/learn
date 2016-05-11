@@ -82,6 +82,10 @@
 | They are work**ing**    | They are **not** work**ing**    | **Are** they work**ing**?   | No, they are            |
 
 > - Ação que acontece **AGORA** ou **ACABANDO DE ACONTECER**
+  - Ação que acontece no momento da **FALA** pode estar _acontecendo_ ou não
+  - Ação que acontece no **FUTURO** _próximo_
+    - Usa-se **always** entre verbo _to be_ e _verbo principal_
+      - You are always asking something
   - **NEGAÇÃO** deve ser usado o **NOT** **após** o verbo _to be_
   - **INTERROGATIVA** verbo _to be_ no **inicio** da frase
   - Regras
