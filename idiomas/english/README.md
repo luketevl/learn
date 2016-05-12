@@ -129,3 +129,27 @@
 
 # Adverbios
 # Adverbs
+## Adverbs of Frequency
+
+| 100%                    |                                 | 50%                               |                               | 0%    |
+|:-----------------------:|:-------------------------------:|:---------------------------------:|:-----------------------------:|:-----:|
+| Always -(sempre)-       | frequently -(frequentemente)-   | sometimes -(às vezes)-            | rarely|seldom -(raramente)-   | Never |
+| Usually -(sempre)-      | often -(com frequencia)-        | occasionally -(aventualmente)-    | hardly ever -(quase nunca)-   |       |
+
+| Others                         |
+|:------------------------------:|
+| dai**ly** -(diariamente)-      |
+| week**ly** -(semanalmente)-    |
+| wonth**ly** -(mensalmente)-    |
+| year**ly** -(anualmente)-      |
+
+> - Usados quando acontece algo com **FREQUENCIA**
+  - Quando verbo _to be_ estiver em **tempo simples**, colocar **DEPOIS**
+    - They were **frequently** on time during the course
+  - Com os demais verbos colocar **DEPOIS** do sujeito e **ANTES** do verbo
+    - They **never** travel by ship
+  - **APÓS** dos verbos modais
+    - We _may_ **never** forgive him
+  - **ANTES** dos verbos auxliares em **respostas** ou quando auxiliares sao usados **isoladamente** em um **periodo composto**
+    - Yes, you **always** may
+    - I realize i shuould exercise more, but i **never** do it
