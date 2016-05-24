@@ -92,6 +92,8 @@
   - Regras
     - Terminado com **e** _remove_ **e** e acrescenta **ING**
     - **Consoante Vogal Consoante** deve _dobrar_ a última letra e acrescenta **ING**
+    - Terminado com **ie** _remove_ **ie** e acrescenta **YING**
+    - **Consoante Vogal L** deve _dobrar_ a última letra e acrescenta **ING**
 
 
 
