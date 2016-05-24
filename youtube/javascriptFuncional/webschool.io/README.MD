@@ -100,6 +100,7 @@
   - Escopo MAIOR e visto no escopo MENOR
   - Variavel LOCAL não foge do seu ESCOPO, mesmo tendo o mesmo nome
   - Variavel GLOBAL passada como parametro NAO tem seu valor ALTERADO :O
+    - Compilador cria uma VARIAVEL LOCAL com o mesmo nome da variavel GLOBAL
 
 * OBSERVAÇÕES
   - Como alterar uma variavel GLOBAL dentro da funcao LOCAL
