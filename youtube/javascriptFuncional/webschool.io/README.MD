@@ -97,4 +97,10 @@
 
 ## Closure
 
-  - 
+  - Escopo MAIOR e visto no escopo MENOR
+  - Variavel LOCAL não foge do seu ESCOPO, mesmo tendo o mesmo nome
+  - Variavel GLOBAL passada como parametro NAO tem seu valor ALTERADO :O
+
+* OBSERVAÇÕES
+  - Como alterar uma variavel GLOBAL dentro da funcao LOCAL
+    - Nao criar a variavel dentro com var,let, cons ;)
