@@ -36,9 +36,65 @@
   - ABSTRACAO, criacao de uma funcao
     - VARIAVEIS
   - APLICACAO, chamada da funcao passar VALOR
-    - 
+
 
 * OBSERVACOES
   - Lambda simples NÃO HÁ CONVERSÃO DE TIPOS
   - COMPOSICAO sao funcoes dentro de funcoes como parametros
   - LAMBDA entrou X sai X (lambdaX.X)
+
+#Aula 3
+
+## Funções
+
+  - Podemos passar FUNCOES dentro de FUNCOES
+  - São OBJETOS com atributos
+  - FUNÇÕES IMPORTANTES
+    - Apply
+    - Call
+    - Bind
+
+  - Funções ANONIMAS
+    - Não tem nome
+    - NÃO salva na MEMORIA
+
+  - Funções IIFE
+    - AUTOMATICAMENTE executada ()
+    - Deve estar dentro do (function(){}())
+    - Executar uma funcao ANONIMAS  
+      - function(){ arguments.callee()};
+
+* OBSERVAÇÕES
+  - Porque JS é FUNCIONAL ?
+    - Porque é voltada a FUNÇÕES
+
+  - TODA FUNÇÃO PRECISA RETORNAR VALOR
+  - Temos que criar CONTRATOS
+    - Validar oque chega para SEMPRE ter o DESEJADO da função
+
+  - Possui ESCOPO FECHADO
+    - VARIAVEL existe apenas DENTRO da função
+
+
+#Aula 4
+
+## First-class e High-order
+
+### First-class
+
+  - Posso fazer qualquer coisa com ela, passar por parametro, atribuir a uma variavel
+
+
+### High-order
+
+  - Quando faz VARIAS COISAS
+    - Funcao que recebe outra funcao como parametro e devolve uma função como retorno
+  - Recebe uma ou mais funcoes como parametro
+  - Retorna uma função
+
+
+#Aula 5
+
+## Closure
+
+  - 
