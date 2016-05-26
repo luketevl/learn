@@ -78,7 +78,7 @@
 | He is work**ing**       | He is **not** work**ing**       | **Is** he work**ing**?      | Yes, he is              |
 | She is work**ing**      | She is **not** work**ing**      | **Is** she work**ing**?     | No she is               |
 | It is work**ing**       | It is **not** work**ing**       | **Is** it work**ing**?      | Yes, it is              |
-| We are work**ing**      | We are **not** work**ing**      | **Are** we work**ing**?     | Yes we are              |
+| We are work**ing**      | We are **not** work**ing**      | **Are** we work**ing**?     | Yes, we are             |
 | They are work**ing**    | They are **not** work**ing**    | **Are** they work**ing**?   | No, they are            |
 
 >
@@ -105,9 +105,9 @@
 | I work                  | I **do not** work               | **Do** i work?              | Yes, i do               |
 | You work                | You **do not** work             | **Do** you work?            | No, you do              |
 | He work**s**            | He **does not** work            | **Does** he works?          | Yes, he does            |
-| She work**s**           | She **does not** work           | **Does** she works?         | No she  does            |
+| She work**s**           | She **does not** work           | **Does** she works?         | No, she  does           |
 | It work**s**            | It **does not** work            | **Does** it works?          | Yes, it does            |
-| We work                 | We **do not** work              | **Do** we work?             | Yes we do               |
+| We work                 | We **do not** work              | **Do** we work?             | Yes, we do              |
 | They work               | They **do not** work            | **Do** they work?           | No, they do             |
 
 >
@@ -155,3 +155,90 @@
   - **ANTES** dos verbos auxliares em **respostas** ou quando auxiliares sao usados **isoladamente** em um **periodo composto**
     - Yes, you **always** may
     - I realize i shuould exercise more, but i **never** do it
+
+# Past simple ( I DID )
+# Passado Simples ( Eu FIZ )
+
+> - Ação que _já ocorreu_ e que _não_ ocorre mais. Inicio e fim no passado
+  - Verbo _NÃO é flexionado_
+  - Passado do verbo _to be_ é **WAS** para _singular_ e **WERENT**  para _plural_
+
+## Verbs REGULAR
+> - **NEGATIVA**
+    - Usa **not did** passado de _do_ com verbo no infinitivo sem o _to_
+    - Forma abreviada **didn't**
+  - **INTERROGATIVA**
+    - Usa **did** _antes_ do SUJEITO com verbo no infinitivo sem o _to_
+
+    | Affirmative             | Negative                        | Interrogative               | Short Answer            |
+    |:-----------------------:|:-------------------------------:|:---------------------------:|:-----------------------:|
+    | I work**ed**            | I **did not** work              | **Did** i work?             | Yes, i did              |
+    | You work**ed**          | You **did not** work            | **Did** you work?           | No, you did             |
+    | He work**ed**           | He **did not** work             | **Did** he work?            | Yes, he did             |
+    | She work**ed**          | She **did not** work            | **Did** she work?           | No, she did             |
+    | It work**ed**           | It **did not** work             | **Did** it work?            | Yes, it did             |
+    | We work**ed**           | We **did not** work             | **Did** we work?            | Yes, we did             |
+    | They work**ed**         | They **did not** work           | **Did** they work?          | No, they did            |
+
+> - Regras
+    -  Normalmente acrescenta o **D** ou **ED**
+    - Verbos _terminados_ com **e** _acrescenta_ o **D**
+
+    | VERB                       | Past                       |
+    |:--------------------------:|:--------------------------:|
+    | hope                       | hope**d**                  |
+
+    - Verbos com uma silaba ou terminados em silaba tônica formada por **Consoante Vogal L** deve _dobrar_ a última letra e acrescenta **ED**
+      - OBS: Ingles BRITANICO palavras terminadas com **l** deve dobrar o **L**
+
+    | VERB                       | Past                       |
+    |:--------------------------:|:--------------------------:|
+    | stop                       | stop**ped**                |
+    | travel                     | travel**led**              |
+
+    - Verbos _terminados_ com **Y** _REMOVER_ e _acrescentar_ o **IED**
+      - Verbos _terminados_ com **Y** mas tem vogar _antes_ deve APENAS _acrescentar_ o **ED**
+
+    | VERB                       | Past                       |
+    |:--------------------------:|:--------------------------:|
+    | cry                        | cr**ied**                  |
+    | play                       | play**ed**                 |
+
+    - Verbos terminados por  **Consoante Vogal L** e a silaba tonica _nao_ é a ultima *NÃO* deve _dobrar_ a consoante e acrescenta **ED**
+      - OBS: Ingles BRITANICO palavras terminadas com **l** deve dobrar o **L**
+
+    | VERB                       | Past                       |
+    |:--------------------------:|:--------------------------:|
+    | listen                     | list**en**                 |
+
+
+    | Affirmative             | Negative                        | Interrogative               | Short Answer            |
+    |:-----------------------:|:-------------------------------:|:---------------------------:|:-----------------------:|
+    | I work                  | I **do not** work               | **Do** i work?              | Yes, i do               |
+    | You work                | You **do not** work             | **Do** you work?            | No, you do              |
+    | He work**s**            | He **does not** work            | **Does** he works?          | Yes, he does            |
+    | She work**s**           | She **does not** work           | **Does** she works?         | No she  does            |
+    | It work**s**            | It **does not** work            | **Does** it works?          | Yes, it does            |
+    | We work                 | We **do not** work              | **Do** we work?             | Yes we do               |
+    | They work               | They **do not** work            | **Do** they work?           | No, they do             |
+
+
+## Verbos REGULARES
+
+
+# Past Continuous  ( I WAS DOING )
+# Passado Simples ( Eu ESTAVA fazendo )
+
+  > - Ação que _estava_ acontecendo em periodo de tempo no passado
+    - Usa o **WAS** para _singular_ e **WERENT** para _plural_
+    - Verbo _acrescenta_ o **ING**
+
+  | Affirmative               | Negative                        | Interrogative               | Short Answer            |
+  |:-------------------------:|:-------------------------------:|:---------------------------:|:-----------------------:|
+  | I **was** work**ing**     | I **do not** work               | **Do** i work?              | Yes, i do               |
+  | You **were** work**ing**  | You **do not** work             | **Do** you work?            | No, you do              |
+  | He **was** work**ing**    | He **does not** work            | **Does** he works?          | Yes, he does            |
+  | She **was** work**ing**   | She **does not** work           | **Does** she works?         | No she  does            |
+  | It **was** work**ing**    | It **does not** work            | **Does** it works?          | Yes, it does            |
+  | We **were** work**ing**   | We **do not** work              | **Do** we work?             | Yes we do               |
+  | They **were** work**ing** | They **do not** work            | **Do** they work?           | No, they do             |
