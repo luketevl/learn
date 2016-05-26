@@ -145,6 +145,13 @@
 | wonth**ly** -(mensalmente)-    |
 | year**ly** -(anualmente)-      |
 
+| Others                         | Pharases                                                                            | Use in
+|:------------------------------:|:-----------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------:|
+| just -(passado recente)-       | We have **just** known each other ( Acabamos de nos conhecer )                      | Indica ações que ocorreram num passado _bem recente_                                                                 |
+| already -(já)-                 | She has **already** arrived home ( Ela já chegou em casa )                          | Ação que já ocorreu, usado _APENAS_ em frases **AFIRMATIVAS** e **INTERROGATIVAS** sempre _ANTES_ do verbo principal |
+| yet -(já, ainda)-              | We have not decided our topic **yet** ( Ainda não decidimos o noso tópico )         | **INTERROGATIVAS** sentido de _já_, **NEGATIVAS** sentido de _ainda_ sempre no _FINAL_ da frase                      |
+| ever -(já, alguma vez)-        | Has she **ever** been in Salvador? ( Ela já esteve em Salvador alguma vez? )        | Geramente usado em **PERGUNTAS**                                                                                     |
+
 > - Usados quando acontece algo com **FREQUENCIA**
   - Quando verbo _to be_ estiver em **tempo simples**, colocar **DEPOIS**
     - They were **frequently** on time during the course
@@ -232,13 +239,53 @@
   > - Ação que _estava_ acontecendo em periodo de tempo no passado
     - Usa o **WAS** para _singular_ e **WERENT** para _plural_
     - Verbo _acrescenta_ o **ING**
+    - Usado para
+      - Descrever ação em andamento no passado
+      - Narrar casos de uma situação passada
+      - Descrever ação em andamento
+        - Normalmente usa-se a conjunção **WHILE**
+      - Ação que habitual que ocorria no passado
+        - Normalmente usa-se adverbios de frequencia (frequently, always, often)
+    - **NEGATIVA**
+        - Usa **not** _entre_ o passado simples do verbo _to be_ e gerundio do **ING**
+        - Forma abreviada **wasn't**, **weren't**
+      - **INTERROGATIVA**
+        - Usa **WAS** para **I**, **HE**,**SHE**,**IT** _antes_ do SUJEITO
+        - Usa **WERE** para **YOU**, **WE**, **THEY** _antes_ do SUJEITO
 
   | Affirmative               | Negative                        | Interrogative               | Short Answer            |
   |:-------------------------:|:-------------------------------:|:---------------------------:|:-----------------------:|
-  | I **was** work**ing**     | I **do not** work               | **Do** i work?              | Yes, i do               |
-  | You **were** work**ing**  | You **do not** work             | **Do** you work?            | No, you do              |
-  | He **was** work**ing**    | He **does not** work            | **Does** he works?          | Yes, he does            |
-  | She **was** work**ing**   | She **does not** work           | **Does** she works?         | No she  does            |
-  | It **was** work**ing**    | It **does not** work            | **Does** it works?          | Yes, it does            |
-  | We **were** work**ing**   | We **do not** work              | **Do** we work?             | Yes we do               |
-  | They **were** work**ing** | They **do not** work            | **Do** they work?           | No, they do             |
+  | I **was** work**ing**     | I **was not** work**ing**       | **Was** i work**ing**?      | Yes, i **was**          |
+  | You **were** work**ing**  | You **were not** work**ing**    | **Were** you work**ing**?   | No, you **were**        |
+  | He **was** work**ing**    | He **was not** work**ing**      | **Was** he work**ing**?     | Yes, he **was**         |
+  | She **was** work**ing**   | She **was not** work**ing**     | **Was** she work**ing**?    | No, she **was**         |
+  | It **was** work**ing**    | It **was not** work**ing**      | **Was** it work**ing**?     | Yes, it **was**         |
+  | We **were** work**ing**   | We **were not** work**ing**     | **Were** we work**ing**?    | Yes, we **were**        |
+  | They **were** work**ing** | They **were not** work**ing**   | **Were** they work**ing**?  | No, they **were**       |
+
+
+
+# Present Perfect 1  ( I HAVE DONE )
+# Present Perfeito 1 ( Eu TINHA feito )
+
+  > - Ação que ocorreram num tempo indefinido no _PASSADO_
+    - Usado com _adverbios_
+    - Ações que começaram no _PASSADO_ e se prolongaram atéo _PRESENTE_
+      - Comum o uso do _since_ e do _for_
+        - I have been here _since_ 8 o'clock a.m ( Estou aqui desde as oito da manhã )
+    - **NEGATIVA**
+        - Usa **not** _entre_ o passado simples do verbo _to be_
+        - Forma abreviada **havent't**, **hasn't**
+      - **INTERROGATIVA**
+        - Usa **HAS** para **HE**,**SHE**,**IT** _antes_ do SUJEITO
+        - Usa **HAVE** para **I**,**YOU**, **WE**, **THEY** _antes_ do SUJEITO
+
+  | Affirmative               | Negative                        | Interrogative               | Short Answer            |
+  |:-------------------------:|:-------------------------------:|:---------------------------:|:-----------------------:|
+  | I **have** work**ed**     | I **have not** work**ed**       | **Have** i worked?           | Yes, i have            |
+  | You **have** work**ed**   | You **have not** work**ed**     | **Have** you worked?         | No, you have           |
+  | He **has** work**ed**     | He **has not** work**ed**       | **Has** he worked?           | Yes, he has            |
+  | She **has** work**ed**    | She **has not** work**ed**      | **Has** she worked?          | No, she has            |
+  | It **has** work**ed**     | It **has not** work**ed**       | **Has** it worked?           | Yes, it has            |
+  | We **have** work**ed**    | We **have not** work**ed**      | **Have** we worked?          | Yes, we have           |
+  | They **have** work**ed**  | They **have not** work**ed**    | **Have** they worked?        | No, they have          |
