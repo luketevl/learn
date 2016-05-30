@@ -265,8 +265,8 @@
 
 
 
-# Present Perfect 1  ( I HAVE DONE )
-# Present Perfeito 1 ( Eu TINHA feito )
+# Present Perfect  ( I HAVE DONE )
+# Present Perfeito ( Eu TINHA feito )
 
   > - Ação que ocorreram num tempo indefinido no _PASSADO_
     - Usado com _adverbios_
@@ -289,3 +289,41 @@
   | It **has** work**ed**     | It **has not** work**ed**       | **Has** it worked?           | Yes, it has            |
   | We **have** work**ed**    | We **have not** work**ed**      | **Have** we worked?          | Yes, we have           |
   | They **have** work**ed**  | They **have not** work**ed**    | **Have** they worked?        | No, they have          |
+
+# Present Perfect Continuous ( I HAVE BEEN DOING)
+# Presente perfeito continuo
+
+  > - Enfatizar a continuidde, duração e intensidade de uma ação que começou no _passado_ e se prolonga ate o _presente_
+    - Ações passadas que acabam de ser concluidas, cujos efeitos ou conseguencias são _evidentes no present_
+      - I'm hot because I've been running
+    - Expressar um fato generico que está _em progresso_ em periodo de tempo _nao especifico_. Pode se usar adverbios de frequencia
+  - **AFIRMATIVA**
+    - Usa o presente simples do verbo _to have (have / has)_ e presente perfeito do verbo _to be_ e gerundio do verbo principal
+    - Adiciona  o **BEEN**
+    - **I've** e **He's**
+  - **NEGATIVA**
+      - Usa **not** _entre_ o present simples  do verbo _to have (have / has)_ e presente perfeito do verbo  _to be_
+      - Forma abreviada **havent't**, **hasn't**
+    - **INTERROGATIVA**
+      - Usa **HAS** para **HE**,**SHE**,**IT** _antes_ do SUJEITO
+      - Usa **HAVE** para **I**,**YOU**, **WE**, **THEY** _antes_ do SUJEITO
+
+  | Affirmative                         | Negative                             | Interrogative                        | Short Answer                  |
+  |:-----------------------------------:|:------------------------------------:|:------------------------------------:|:-----------------------------:|
+  | I **have** **been** work**ing**     | I **have not been** work**ing**      | **Have** i **been** work**ing**?     | Yes, i **have been**          |
+  | You **have** **been** work**ing**   | You **have not been** work**ing**    | **Have** you **been** work**ing**?   | No, you **have** **been**     |
+  | He **has** **been** work**ing**     | He **has not been** work**ing**      | **Has** he **been** work**ing**?     | Yes, he **has** **been**      |
+  | She **has** **been** work**ing**    | She **has not been** work**ing**     | **Has** she **been** work**ing**?    | No, she **has** **been**      |
+  | It **has** **been** work**ing**     | It **has not been** work**ing**      | **Has** it **been** work**ing**?     | Yes, it **has** **beens**     |
+  | We **have** **been** work**ing**    | We **have not been** work**ing**     | **Have** we **been** work**ing**?    | Yes, we **have** **been**     |
+  | They **have** **been** work**ing**  | They **have not been** work**ing**   | **Have** they **been** work**ing**?  | No, they **have** **been**    |
+
+
+=== NÃO CONFUNDA
+> - **Present Continuous** x **Present Perfect Continuous** x **Present Perfect**
+    - O **Present Continuous** expressa uma ação que está _ocorrendo no momento, agora_:
+      - She is mak**ing** a cake now. (Ela está fazendo um bolo agora.)
+    - O **Present Perfect Continuous** expressa uma ação que _começou no passado e continua até o presente_:
+      - He **has been** cook**ing** for one hour. (Ele está cozinhando há uma hora.)
+    - O **Present Perfect** expressa ações que _acabaram em um tempo não definido no passado_:
+      - She **has** _made_ a cake. (Ela fez um bolo.)

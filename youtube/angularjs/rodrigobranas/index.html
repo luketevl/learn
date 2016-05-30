@@ -36,6 +36,7 @@
 		* ng-repeat (Interação entre Coleções e Objetos)
 			= ng-repeat= "contato in contatos"
 				* ng-repeat="(chave, valor) in contato"
+			= track by $index ( AJUDA NA PERFORMANCE, REDEFINE APENAS AQUELE QUE MUDOU)
 		* ng-model (Inverso da INTERPOLAÇÃO, ng-bind), pega algo da VIEW e DEFINE no $SCOPE
 		* ng-click (Comportamento em EVENTO)
 		* ng-disabled (Desabilitar ELEMENTO), BOOLEAN
@@ -62,6 +63,7 @@
 		* ng-messages (MODULO | Chamar js e declarar [])
 			= ng-message
 		* ng-view (Template da ROTA acessada)
+		* ng-src (IMPEDE QUE O NAVEGADOR CARREGA A IMAGEM MESMO QUANDO NÃO DEVERIA)
 		* CRIANDO DIRETIVAS .directive
 		 	= template 'inserir html'
 			= templateUrl 'inserir arquivo html'
