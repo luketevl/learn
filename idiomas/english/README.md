@@ -319,7 +319,7 @@
   | They **have** **been** work**ing**  | They **have not been** work**ing**   | **Have** they **been** work**ing**?  | No, they **have** **been**    |
 
 
-=== NÃO CONFUNDA
+### NÃO CONFUNDA
 > - **Present Continuous** x **Present Perfect Continuous** x **Present Perfect**
     - O **Present Continuous** expressa uma ação que está _ocorrendo no momento, agora_:
       - She is mak**ing** a cake now. (Ela está fazendo um bolo agora.)
@@ -327,3 +327,36 @@
       - He **has been** cook**ing** for one hour. (Ele está cozinhando há uma hora.)
     - O **Present Perfect** expressa ações que _acabaram em um tempo não definido no passado_:
       - She **has** _made_ a cake. (Ela fez um bolo.)
+
+
+## Artigos
+## Articles
+
+  > - É uma classe de palavras que se antepõe ao _substantivo_
+  - Artigo **definido**
+      - **THE** é usado:
+        - Quando o substantivo já foi dito _anteriormente_
+          - He wrote some _letters_ and postcards. **The** letters were to his girlfriend
+        - _Substantivos_ unicos em sua especie
+          - sun, moon, sky, planet Earth, universe
+        - Nomes geograficos, rios, mares, oceanos, polos, desertos, golfos
+          - The Amazonas River, The North Pole
+        - _Adjetivos_ usados como _substantivos_ no **plural**
+          - **The** poor, **The** powerful, **The** good, **The** bad
+          - OBS: Singular usar **the** powerful **man**
+        - _Nomes compostos_ de paises
+          - **The** United States
+        - Nomes proprios (mas nunca se usa artigo antes de nomes próprios e de possessivos)
+          - **The** Martins
+        - Antes de nomes de instrumentos musicais e ritmos/danças
+          - John plays **the** _piano_ very well
+          - Juan dances **the** _tango_ like a professional
+        - Com nomes de _jornais_
+          - **The** New York Times
+        - Com maioria dos nomes de _edificios_
+          - **The Vatican**
+          - Com nomes de _cinemas, teatros, hoteis, restaurantes, clubes, museus, bibliotecas e galerias de arte_
+            -
+
+
+    - Artigo **indefinido**
