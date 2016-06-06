@@ -360,3 +360,7 @@
 
 
     - Artigo **indefinido**
+      - Significado de _um_ ou _uma_
+      - **AN** usar se _substantivo_ começar com _VOGAL_ há alguns casos a parte
+
+      - **A**
