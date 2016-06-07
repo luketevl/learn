@@ -24,9 +24,9 @@
     element.focus();
     ```
     - **Busca** _valor_ de um elemento  
-      ```
-      element.value
-      ```
+    ```
+    element.value
+    ```
     - **Cancela** ação do _evento_
     ```
     event.preventDefault();
@@ -50,57 +50,57 @@
        });
       ```
 
-    === Comandos JS ECMA6
-      > - Iteração em elementos de forma **funcional**
+=== Comandos JS ECMA6
+  > - Iteração em elementos de forma **funcional**
+  ```
+  var.forEach(function(param){
+  return param;
+  });
+  ```
+    - _spread operator_ Usado para passar cada posicao de um array como parametro de uma função, usar o 3 pontos **...**
+    ```
+    function myFunction(x, y, z) { }
+    var args = [0, 1, 2];
+    myFunction.apply(null, args);
+    ```
+  > - **ARROW FUNCTIONS =>** Nova forma de declarar funcoes
+      - Quando há _apenas_ **UMA** instrucao ele faz o **RETURN** _automatico_
+    ```
+    let variable = variable.map( (item) => item);
+    ```
+
+  > - Criar **CLASSE**
+      - Estrutura padrão
       ```
-      var.forEach(function(param){
-      return param;
-      });
+      Class NameClass{}
       ```
-        - _spread operator_ Usado para passar cada posicao de um array como parametro de uma função, usar o 3 pontos **...**
-        ```
-        function myFunction(x, y, z) { }
-        var args = [0, 1, 2];
-        myFunction.apply(null, args);
-        ```
-      > - **ARROW FUNCTIONS =>** Nova forma de declarar funcoes
-          - Quando há _apenas_ **UMA** instrucao ele faz o **RETURN** _automatico_
-        ```
-        let variable = variable.map( (item) => item);
-        ```
+      - Criar os **PROPRIEDADES** da CLASSE deve usar o metodo _constructor_
+        - Apenas sera _invocada_ caso a classe seja chamada com **new**, vinculando o _this_ ao objeto criado.
+          ```
+          constructor(params){ this.variable = value }
+          ```
+      - Criar **metodos** na CLASSE
+      ```
+      methodName(){}
+      ```
+      - Criar **GETTERS**
+      ```
+      get name (){return value;}
 
-      > - Criar **CLASSE**
-          - Estrutura padrão
-          ```
-          Class NameClass{}
-          ```
-          - Criar os **PROPRIEDADES** da CLASSE deve usar o metodo _constructor_
-            - Apenas sera _invocada_ caso a classe seja chamada com **new**, vinculando o _this_ ao objeto criado.
-              ```
-              constructor(params){ this.variable = value }
-              ```
-          - Criar **metodos** na CLASSE
-          ```
-          methodName(){}
-          ```
-          - Criar **GETTERS**
-          ```
-          get name (){return value;}
+      // Chamada
+        instance.name; // Não há necessidade de ()
+      ```
 
-          // Chamada
-            instance.name; // Não há necessidade de ()
-          ```
-
-      > - **Declarações** de variaveis
-          - **let** , tem escopo de **BLOCO** esse modo **NÃO** permite _declarar_ a variavel novamente no mesmo _BLOCO_
-          ```
-          let variable;
-          // Example
-          for(let i = 0 ; i < 100 ; i++){
-            console.log(i); // Have a value
-          }
-          console.log(i); // Undefined
-          ``
+  > - **Declarações** de variaveis
+      - **let** , tem escopo de **BLOCO** esse modo **NÃO** permite _declarar_ a variavel novamente no mesmo _BLOCO_
+      ```
+      let variable;
+      // Example
+      for(let i = 0 ; i < 100 ; i++){
+        console.log(i); // Have a value
+      }
+      console.log(i); // Undefined
+      ```
 
 
 === Observações
