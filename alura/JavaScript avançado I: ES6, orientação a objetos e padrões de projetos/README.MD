@@ -86,7 +86,6 @@
       - Criar **GETTERS**
       ```
       get name (){return value;}
-
       // Chamada
         instance.name; // Não há necessidade de ()
       ```
