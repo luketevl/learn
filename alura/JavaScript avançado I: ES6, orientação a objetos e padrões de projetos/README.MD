@@ -19,6 +19,10 @@
     ```
     element.appendChild(elementChild);
     ```
+    - **Converte para elemento DOM** _elemento_ FILHO com um texto
+    ```
+    element.innerHTML = stringChild;
+    ```
     - **FOCO** no _elemento_
     ```
     element.focus();
@@ -40,15 +44,19 @@
       let $ = document.querySelector.bind(document);
     ```
     - Ver qual é o **tipo** da variavel
-      ```
-      typeof(variable);
-      ```
+    ```
+    typeof(variable);
+    ```
     - **Transforma** um array em um **NOVO** array, executando uma funcao _ANTES_
-      ```
-      let numbers = numbers.map(function(el, index){
-        return el;
-       });
-      ```
+    ```
+    let numbers = numbers.map(function(el, index){
+      return el;
+     });
+    ```
+    - **CONCATENAR** arrays
+    ```
+    [].concat(array1, array2);
+    ```
 
 === Comandos JS ECMA6
   > - Iteração em elementos de forma **funcional**
@@ -68,6 +76,11 @@
     ```
     let variable = variable.map( (item) => item);
     ```
+  > - **template string** tem que usar _crase_ e a variavel tem que ficar por dentro do **${}**
+      - Pode usar variavel no meio da string, faz _interpolacao_
+    ```
+    let variable = `Text ${variable2} more text`;
+    ```
 
   > - Criar **CLASSE**
       - Estrutura padrão
@@ -82,6 +95,10 @@
       - Criar **metodos** na CLASSE
       ```
       methodName(){}
+      ```
+      - Criar **metodos ESTATICOS** na CLASSE
+      ```
+      static methodName(){}
       ```
       - Criar **GETTERS**
       ```
