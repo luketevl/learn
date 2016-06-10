@@ -6,16 +6,23 @@ class NegociacaoController{
     this._valor             = $('#valor');
     this._listaNegociacoes  = new ListaNegociacoes();
     this._negociacaoView    = new NegociacaoView($('#negociacaoView'));
+    this._msgView           = new MensagemView($('#msgView'));
 
-    this._negociacaoView.update();
+    this._negociacaoView.update(this._listaNegociacoes);
   }
   add(event){
     event.preventDefault();
     console.log('Add negociacao Controller');
 
+    let msg = new Mensagem('Success');
+
+    this._msgView.update(msg);
+
     let negociacao = new Negociacao(DateHelper.textToDate(this._vrdata.value), this._quantidade.value, this._valor.value);
     this._listaNegociacoes.add(negociacao);
-    console.log(this._listaNegociacoes.listaNegociacoes);
+
+    this._negociacaoView.update(this._listaNegociacoes);
+
     this._clearForm();
   };
 

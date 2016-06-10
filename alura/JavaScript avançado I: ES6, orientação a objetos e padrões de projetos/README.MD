@@ -23,6 +23,10 @@
     ```
     element.innerHTML = stringChild;
     ```
+    - **Converte array paa STRING** vira uma string grande
+    ```
+    array.join(param);
+    ```
     - **FOCO** no _elemento_
     ```
     element.focus();
@@ -60,11 +64,17 @@
 
 === Comandos JS ECMA6
   > - Iteração em elementos de forma **funcional**
-  ```
-  var.forEach(function(param){
-  return param;
-  });
-  ```
+    ```
+    var.forEach(function(param){
+    return param;
+    });
+    ```
+    - *SOMA** Iteração em elementos de forma **funcional**
+    ```
+    var.reduce(function(total, item){
+    return total + item;
+    }, 0);
+    ```
     - _spread operator_ Usado para passar cada posicao de um array como parametro de uma função, usar o 3 pontos **...**
     ```
     function myFunction(x, y, z) { }
@@ -95,6 +105,7 @@
       - Criar **metodos** na CLASSE
       ```
       methodName(){}
+      methodName(elemente = ''){}
       ```
       - Criar **metodos ESTATICOS** na CLASSE
       ```
@@ -106,6 +117,20 @@
       // Chamada
         instance.name; // Não há necessidade de ()
       ```
+      - Criar **SETTERS**
+      ```
+      set name (value){variable = value;}
+      // Atribuicao
+        instance.name = value; // Não há necessidade de ()
+      ```
+      - **EXTENDS** HERANÇA no jS
+      ```
+      Class NameClass extends Class{}
+      ```
+      - Apenas sera _invocada_ caso a classe seja chamada com **new**, vinculando o _this_ ao objeto criado, **SUPER** chama o metodo do _PAI_
+        ```
+        constructor(params){ super(params) }
+        ```
 
   > - **Declarações** de variaveis
       - **let** , tem escopo de **BLOCO** esse modo **NÃO** permite _declarar_ a variavel novamente no mesmo _BLOCO_
@@ -123,3 +148,5 @@
   > - Ao importar o JAVASCRIPT colocar no final do BODY, pois assim a pagina toda carrega antes e os elementos vao existir ja
     - Cuidado com **IMUTABILIDADE**
     - Colocar _ antes do nome da variaveis apenas para convenção que ele _private_
+    - Na **HERANÇA** deve carregar o arquivo PAI antes dos filhos
+    - **AINDAAAA** nao há metodos **abstratos** então lance uma excessao no pai com o metodo ;)
