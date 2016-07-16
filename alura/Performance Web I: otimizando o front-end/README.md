@@ -11,14 +11,15 @@
 
   - Server
     - Habilitar compress (gzip)
+    - Usar **cache**
 
   - Diminuir numeros de REQUEST
   - Criar **SPRITES** http://imagemmagick.com
     - convert origem -append destino
-  - SVG
+  - **SVG**
     - https://jonathantneal.github.io/svg4everybody/
-  - Inline com JS importantes e pequenos
-  - Paralelizar REQUEST, mude o hostname
+  - **Inline** com JS importantes e pequenos
+  - **Paralelizar** REQUEST, mude o hostname
 
 
 = Comandos / Ferramentas
@@ -36,6 +37,7 @@
   - gulp minify
   - gulp useref
   - Inlinesource
+  - REV | coloca versao do arquivo no nome do arquivo para cache eh bom
 
 = Obsvervações
 
@@ -45,6 +47,8 @@
     - gzip on; / Bom para arquivos de texto
     - Só comprime HTML por padrao, tem que mudar com o comando
       - gzip_types application/javascript
+
+    - location /assets{expires 1d;} | Habilitar tempo de cache para determinado local de arquivos
   - Servidor HTTP Google App Engine SDK for PHP
   - HTTP ARCHIVE | Site mostra performance de varios sites
   - SVG é vetorial, redimencionar apenas que sao bitmap
@@ -65,3 +69,7 @@
   - Colocar no HTML os js que sao PEQUENOS e que podem se importantes para o conteudo
   - **HTML** deve ter menos que **14kbs** minificado e com todos os recursos, por causa dos 10 segmentos TCP
   - Trabalhar com 3 HOSTS NAMES no maximo
+  - Servidor fala para o navegador fazer cache com HEADER HTTP
+    - Cache-control | Tempo em segundos
+      - SE adicionar **public** qualquer intermediaria pode fazer o cache
+  - Wpostats da casos de performance
