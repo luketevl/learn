@@ -3,11 +3,13 @@
     - **git diff v1 v2** | Mostra a _diferença_ entre versoes, arquivos etcs
     - **git blame** | Mostra _alterações linha por linha_ em todas as versões, nome do arquivo se foi alterado, quem alterou, quando alterou
     - **git clone URL** | _Clona_ projeto
-    - **git checkout version** | _TROCA de VERSAO_ e comeca a usar
+    - **git checkout --fileNAME** | Da _revert_ NO ARQUIVO
+      - **git checkout version** | _TROCA de VERSAO_ e comeca a usar
       - **git checkout -b NAMEBRANCH** | _CRIA e TROCA de BRANCH_ e comeca a usar
       - **git checkout -t remoteBranch** | _CRIA_ branch local com base em uma branch remota
     - **git ls-files** | _MOSTRA_ quais _arquivos_ estao sendo _VERSIONADOS_
     - **git status** | _MOSTRA ESTADO ATUAL_ do no git, arquivos nao monitorados, nao adicioandos e a serem enviados
+    - **git init** | _CRIA_ um  repositorio no _GIT_
     - **git add** | _ADICIONA_ arquivos _NOVOS / MODIFICADOS_ para o controle do _GIT_ NA _INDEX STAGING AREA_ e poder ser _COMITADO_, _WORKING Directory_ VS _HEAD_
       - **git add -i** | Modo _INTERATIVO_ quais alteracoes feitas no WORKING Directory devem ser _ADCIIONADAS_ AO STAGING AREA
     - **git commit -m "msg"** | _COMITA_ as alterações
@@ -34,11 +36,25 @@
       - **git branch -d** | _DELETA_ as branch do projeto _LOCAL_
     - **git pull** | _SINCRONIZA_ com repositorio _REMOTO_
     - **git fetch origin** | Verifia todas as alteracoes que foram feitas no repositorio  _REMOTO_
-
-    - CICLO
-      - **git init** | _CRIA_ um  repositorio no _GIT_
-      -
-
+    - **git mergetool** | _MOSTRA_ uma lista de _ferramentas_ para editar conflitos
+      - **git mergetool programName** | _EXECUTA_ o _programa_ para editar conflitos
+    - **git merge branchNAME** | _TRAS COMMIT_ de uma branch para outra
+    - **git rebase branchNAME branchNAME** | _ATUALIZA_ uma branc com _base em OUTRA_
+      - **git rebase --continue** | Quando tem _CONFLITO_ ele continuar o _rebase_
+    - **git reset HEAD** | _MUDA_ estado do arquivo remoda da _STAGING AREA_ e enviar para a _WORKING Directory_
+      - **git reset commitNumber** | Volta arquivo para determinado commit  
+      - **git reset --soft** | enviar para a _STAGING AREA_
+      - **git reset --hard** | Remove _PERMANENTEMENTE_
+    - **git revert commitNumber** | _DESFAZ_ COMMIT
+    - **git stash** | Salva conteudo _nao COMITADO_ em um lugar _TEMPORARIO_
+      - **git stash list** | _LISTA_ arquivos _TEMPORARIOS_
+      - **git stash pop** | _Remove_ do temporario e envia para o normal
+      - **git stash apply stash{numberStas}** | _ENVIA_ do temporario e envia para o normal
+      - **git stash drop** | _DELETA_ o do temporario _ULTIMO_
+      - **git stash clear** | _DELETA_ o do temporario _TODOS_
+    - **git bisect start** | _INICIA_ modo de _PROCURA_ de commits
+      - **git bisect bad commitNUMBER** | _INFORMA_ qual é a versão **com** _PROBLEMA_
+      - **git bisect good commitNUMBER** | _INFORMA_ qual é a versão **SEM** _PROBLEMA_
 
 
 == OBSERVAOES
@@ -49,10 +65,21 @@
   - **-** Removido
   - **+** Acrescentado
   - **@@**
+  - **<=** Conteudo _ANTIGO_ do CONFLITO
+  - **>=** Conteudo _NOVO_ do CONFLITO
+  - **~** HEAD~N volta para n-esimo
 - AO COMITAR se nao tiver definido um USUARIO vai dar problema, DEFINE SEMPRE O USUARIO
 - ESTADOS DE UM DIRETORIO
   - **Working Directory** | Arquivos que temos no nosso repositorio e podemos modifica-los
   - **INDEX ou STAGING AREA** | Visao das _MODIFICACOES_
   - **HEAD** | COMPLETO DO REPOSITORIO usado para referencia com a Working Directory
-- É IMPORTANTE trabalhar com BRANCHES
 - BRANCH asterisco * no NOME DA BRANCH é a branch usado atualmente
+- MERGE ele faz automatico ao dar **pull**
+- É IMPORTANTE trabalhar com BRANCHS
+- BRANCH **no branch** é _TEMPORARIA_ usada para tratar _CONFLITOS_
+- _GIT REBASE_ tem 3 opcoes
+  - **continue** | Usado de pois que  corrigir os conflitos manuais
+  - **abort** | Volta atrás com todo o processo do REBASE
+  - **skip** | Descarta as alterações
+- Ferramentas para GIT
+  - Git-cola
