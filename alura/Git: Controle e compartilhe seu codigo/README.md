@@ -19,7 +19,11 @@
     - **git config user.email "email"** | _CRIAR EMAIL_
       - **git config --global user.email "email"** | _CRIAR EMAIL GLOBAL_
     - **git log** | _MOSTRA_ o _LOG_ de _commits_
-      - **git log** | _MOSTRA_ o _CONTEUDO_ do _LOG_ de _commits_
+      - **git log -p** | _MOSTRA_ o _LOG_ de _commits_ e o _CONTEUDO_ **ALTERADO**
+      - **git log --pretty**
+        - **git log --pretty=online** | _MOSTRA_ o _CONTEUDO_ do _LOG_ de _commits_ _POR LINHA_
+        - **git log --pretty=short** | _MOSTRA_ o _CONTEUDO_ do _LOG_ de _commits_ _SEM DATA_
+        - **git log --pretty=full** | _MOSTRA_ o _CONTEUDO_ do _LOG_ de _commits_ _QUEM INSERIU PRIMEIRO TAMBEM_
     - **git whatchanged** | _MOSTRA_ os arquivos que foram _alterados_ nos _commits_
       - **git whatchanged -p** | _MOSTRA_ o _CONTEUDO_ dos arquivos que foram _alterados_ nos _commits_
     - **git remote** | _MOSTRA_ repositorios _REMOTOS_
@@ -55,9 +59,12 @@
     - **git bisect start** | _INICIA_ modo de _PROCURA_ de commits
       - **git bisect bad commitNUMBER** | _INFORMA_ qual é a versão **com** _PROBLEMA_
       - **git bisect good commitNUMBER** | _INFORMA_ qual é a versão **SEM** _PROBLEMA_
+    - **git cherry-pick commitNUMBER** | Pega apenas o _COMMIT_ informado
+      - **git cherry-pick commitNUMBERInicial..final** | Pega apenas o _COMMIT_ informado em _INTERVALOS_
 
 
-== OBSERVAOES
+
+== OBSERVACOES
  - Controle de versão
  - Cada usuário tem sua copia
  - Para enviar arquivos é necessário ter os arquivos que estão no servidor e DEPOIS enviar
@@ -83,3 +90,12 @@
   - **skip** | Descarta as alterações
 - Ferramentas para GIT
   - Git-cola
+- Criar **APELIDOS** _ALIAS_
+  - Configurar arquivo
+    - vim ~/.gitconfig
+      - [alias] comando = new command
+      - [alias] comando = !new command | CRIA COMANDO DO TERMINAL
+- **GIT LOG PRETTY** tem varios parametros
+- CONTRIBUIR
+  - Adicionar um git remote com o projeto verdadeiro
+  - Atualizar branch master com pull
