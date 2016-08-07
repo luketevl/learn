@@ -25,6 +25,25 @@
       });
     });
     ```
+    - **Promises** || Promessa retorna um resultado futuro de algo, é _assincrona_
+      - Como _criar_ promise
+      ```
+      return  new Promise((resolve, reject) => {
+        resolve(); // é o .then
+        reject(); // é o .catch
+      });
+      ```
+      - Como _usar_ a promise
+      ```
+      promise.then(successCallback).catch(errorCallback);
+      ```
+      - Como _encadear_ **promises**, retorna o resultado de _todas_ as promises quando _todas_ _terminarem_
+        - .then() || Possui array com _todas_ as _promise_
+        - .catch || Para apenas _uma promise_
+      ```
+      Promise.all([promises]);
+      ```
+
 === Observações
   >
     - **ARROW FUNCTIONS** possui _ESCOPO_ **LEXO**
