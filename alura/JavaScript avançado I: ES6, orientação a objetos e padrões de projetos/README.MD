@@ -150,4 +150,3 @@
     - Colocar _ antes do nome da variaveis apenas para convenção que ele _private_
     - Na **HERANÇA** deve carregar o arquivo PAI antes dos filhos
     - **AINDAAAA** nao há metodos **abstratos** então lance uma excessao no pai com o metodo ;)
-    - **ARROW FUNCTIONS** possui _ESCOPO_ **LEXO** _NAO MUDA_ de acordo com o contexto
