@@ -1,11 +1,10 @@
 
-## Banco de dados
-- Navegadores possuem um **banco de dados OFFLINE**, chamado **indexeddb**
-
 ## CLASSE
+
 ## Comandos JS PADRAO
 
 ## Banco de dados
+- Navegadores possuem um **banco de dados OFFLINE**, chamado **indexeddb**
 - Ver o banco de dados do Navegador , mostra idbfactory
 ```
 window.indexedDB
