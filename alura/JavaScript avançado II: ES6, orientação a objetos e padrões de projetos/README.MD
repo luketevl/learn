@@ -1,14 +1,14 @@
-=== CLASSE
+## CLASSE
   > - **Reflect**
       - **.apply(function, context, [params])** | _CLASSE ECMA6_ de reflexão, chama comando e contexto
       - **.get(target, prop, receiver)** | _CLASSE ECMA6_ de reflexão, busca o valor original
     - **Proxy** | Classe de proxy
 
-=== Comandos JS PADRAO
+## Comandos JS PADRAO
   > - **[].includes()** || Verifica se contem aquela palavra
     - **typeof()** || Verifica o TIPO
 
-=== Comandos JS ECMA6
+## Comandos JS ECMA6
   > - **Proxy** ||
     ```
       let proxy = new Proxy(instance CLASS, {
@@ -44,7 +44,7 @@
       Promise.all([promises]);
       ```
 
-=== Observações
+## Observações
   >
     - **ARROW FUNCTIONS** possui _ESCOPO_ **LEXO**
     - Métodos criados usando ES6 são adicionados no **prototype**. Qualquer método adicionando em prototype estará disponível para _todas_ as instâncias.

@@ -33,7 +33,28 @@
         request.onerror = function(e){
           console.log('negociacao fake ', e.target.error);
         };
+      };
+
+      const list = () => {
+        const transaction = connection.transaction(['negociacoes'], 'readwrite');
+        const store = transaction.objectStore('negociacoes');
+        const cursor = store.openCursor();
+        let negociacoes = [];
+        cursor.onsuccess = function(e){
+          if(e.target.result){
+            const dado = e.target.result.value;
+            negociacoes.push(new Negociacao(dado._data, dado._quantidade, dado._valor));
+            e.target.result.continue();
+          }
+          else{
+            console.log('negociacao add', negociacoes);
+          }
+        };
+        cursor.onerror = function(e){
+          console.log('negociacao fake ', e.target.error);
+        };
       }
+
     </script>
   </head>
   <body>

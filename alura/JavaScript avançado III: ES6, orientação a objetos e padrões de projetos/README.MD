@@ -1,5 +1,9 @@
 
 ## CLASSE
+- Criar metodo **estático**
+```
+static method(){}
+```
 
 ## Comandos JS PADRAO
 
@@ -67,9 +71,19 @@ const store = transaction.objectStore('objectStoreName');
 ```
 const request = store.add(object);
 ```
+- **Lista** uma _object store_, com **cursor** _ponteiro_
+```
+const cursor = store.openCursor();
+cursor.onsuccess = (e) => {
+  e.target.result.continue(); // vai para o próximo ponteiro
+}
+```
 
 
 ## Comandos JS ECMA6
+- Criar **modulos**
+```
+```
 
 ## Observações
 - **indexedDB**
@@ -81,5 +95,7 @@ e.target.error
   - **Object Stories** _NÃO_ possui **schema**, _restrições_
   - Para **obter** uma _object store_ é necessário _criar_ uma **transaction**
   - Para **adicionar** em uma _object store_ é necessário _criar_ uma **store**
-  - _Metodo_ **add** retorna uma **requisição**
+  - _Metodo_ **add, openCursor** retorna uma **requisição**
   - É **ASSINCRONO**
+  - **openCursor** ele retorna _vazio_ quando _não_ há dados
+  - **openCursor** para _pegar_ os **valores** usar **.target**
