@@ -30,6 +30,10 @@ openRequest.onsuccess; = e => {};
 ```
 openRequest.onerror = e => {};
 ```
+- Disparado quando da **abort** na _conexão_
+```
+request.onabort = e => {};
+```
 - **Pega** qual é o **erro**
 ```
 openRequest.onerror = e => {
@@ -63,6 +67,11 @@ connection.objectStoreNames;
 ```
 const transaction = connection.transaction(['objectStoreName'], type);
 ```
+- **Realiza Rollback** ele chama o evento onerror
+```
+// #### VAI CANCELAR A TRANSAÇÃO. O evento onerror será chamado.
+transaction.abort();
+```
 - **Obtem** a _object store_
 ```
 const store = transaction.objectStore('objectStoreName');
@@ -78,7 +87,10 @@ cursor.onsuccess = (e) => {
   e.target.result.continue(); // vai para o próximo ponteiro
 }
 ```
-
+- **Remove** em uma _object store_
+```
+const request = store.clear();
+```
 
 ## Comandos JS ECMA6
 - Criar **modulos**
@@ -87,6 +99,7 @@ cursor.onsuccess = (e) => {
 
 ## Observações
 - **indexedDB**
+  - É **auto commited** no _onsuccess_
   - Crie todos os eventos depois execute o código, **PORQUE** ele _chama_ o **onupgradeneeded** APENAS **uma vez**
   - Eventos: Busca qual é o erro
 ```
@@ -99,3 +112,6 @@ e.target.error
   - É **ASSINCRONO**
   - **openCursor** ele retorna _vazio_ quando _não_ há dados
   - **openCursor** para _pegar_ os **valores** usar **.target**
+  - Bibliotecas que lidam com o **indexedDB** _Dexie_ e o _Db.js_
+- **Monk path** _modifica_ um metodo API na marra ! Usar em **ULTIMO** caso
+- Cuidado com o **escopo lexico** das **arrow functions**
