@@ -115,3 +115,4 @@ e.target.error
   - Bibliotecas que lidam com o **indexedDB** _Dexie_ e o _Db.js_
 - **Monk path** _modifica_ um metodo API na marra ! Usar em **ULTIMO** caso
 - Cuidado com o **escopo lexico** das **arrow functions**
+- **TIPOS LITERAIS** não comparam _posição da memória_
