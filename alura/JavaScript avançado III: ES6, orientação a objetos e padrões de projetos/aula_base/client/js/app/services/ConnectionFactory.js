@@ -1,9 +1,12 @@
+const ConnectionFactory = (function(){
+
+
 const stores = ['negociacoes'];
 const version = 4;
 const dbName = 'aluraframe';
 var connection = null;
-
-class ConnectionFactory {
+var close = null;
+return class ConnectionFactory {
 
   constructor(){
     throw new Error('nao pode instancia');
@@ -20,8 +23,10 @@ class ConnectionFactory {
           openRequest.onsuccess = function(e){
             console.log('Conexão feita');
             resolve(e.target.result);
-            if(connection){
+            if(!connection){
               connection = e.target.result;
+              close = connection.close.bind(connection);
+              connection.close = () => { throw new Error('nao pode fechar a connection') };
             }
             resolve(connection)
           };
@@ -43,4 +48,12 @@ class ConnectionFactory {
       }
     });
   }
+
+  static closeConnection(){
+    if(connection){
+      close();
+      connection = null;
+    }
+  }
 }
+})();
