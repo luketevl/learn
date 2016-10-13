@@ -107,6 +107,20 @@ list.some( el => el == element);
 fetch(url).then(res => res.json());
 ```
 
+### Módulos
+- **Criar** _modulo_
+```
+export default class Name{}
+```
+- **Utilizar** _modulo_
+```
+import {} from path;
+```
+- **LOADAER** de _terceiros_
+```
+- npm install systemjs --save
+```
+
 ## TRANSPILER
 - **BABEL**
 ```
@@ -115,6 +129,10 @@ sudo npm install babel --save-dev
 - **BABEL PRESET ES2015** | Entende a _sintaxe_ **ecma5** para _convrter_ em **ecma6**
 ```
 sudo npm install babel-preset-es2015 --save-dev
+```
+- **BABEL PLUGIN TRANSFORM ES2015 MODULES SYSTEMJS** | Entende o _modulo_ de **LOADER** **systemjs** utilizado.
+```
+sudo npm install babel-plugin-transform-modules-systemjs
 ```
 
 ## Observações
@@ -143,3 +161,6 @@ e.target.error
   - Ao fazer o _transpiler_ colocar o _parametro_ **--source-maps**, assim ele mostra os _erros_ no arquivo _original_, **MUITO BOM PARA DEBUG**
   - Possui um **WATCH**
   - Arquivos **sourcemap** são _baixados_ **apenas** quando _developer tools_ é aberto
+- **não** HÁ UM **LOAD** padrao nos navegadores, em que usar _libriries_ de terceiros
+  - **Systemjs** | LOADER, com ele não precisa importar os scripts na página, configurando apenas para carregar um, assim ele resolve as dependencias automaticamente.
+- **EVENTO BOLHA** _Delegação de eventos_, o _PAI_ do ELEMENTO **responde** pelo seu _filho_
